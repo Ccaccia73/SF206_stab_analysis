@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# added for med files (meshes, results, Salome files)
+.med
+.mmed
+.rmed
+.hdf
