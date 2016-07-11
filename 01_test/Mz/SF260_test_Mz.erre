@@ -1,0 +1,36 @@
+                                                                                
+                                                                                
+        -- CODE_ASTER -- VERSION:  DÉVELOPPEMENT STABILISÉE (testing) --        
+                                                                                
+                       Modified 13.1.0 version 14/12/2015                       
+                  the revision 36893b10ca0c - branch  default                   
+                        Copyright EDF R & D 1991 - 2016                         
+                                                                                
+                    Exécution of:  Mon Jul 11 13:51:40 2016                     
+                         Name of the machine:  celsius                          
+                               Structure:  64bit                                
+                               CPU type:  x86_64                                
+         Operating system:  Linux Ubuntu 16.04 xenial 4.4.0-30-generic          
+                     Language of the messages:  en (UTF-8)                      
+                                                                                
+                             Python version: 2.7.12                             
+                             NumPy version: 1.11.0                              
+                             Parallelism MPI: idle                              
+                           OpenMP parallelism: Nombre                           
+                          credit of processes used:  4                          
+                      Version of the HDF5 library : 1.8.10                      
+                       Version of the MED library : 3.0.8                       
+                     Version de la librairie MFront : 2.0.3                     
+                         MUMPS library : not available                          
+                          PETSc library: not available                          
+                     Version of the SCOTCH library : 5.1.10                     
+                  Mémoire limite pour l'exécution : 8192.00 Mo                  
+                   consommée par l'initialisation : 276.33 Mo                   
+                  par les objets du jeu de commandes : 8.16 Mo                  
+                 reste pour l'allocation dynamique : 7906.12 Mo                 
+                   Cut limiting files of exchange:  12.00 Go                    
+                                                                                
+ <I> <FIN> FERMETURE DE LA BASE "GLOBALE" EFFECTUEE.
+
+ <FIN> Arrêt normal dans "FIN".
+ <I> <FIN> ARRET NORMAL DANS "FIN" PAR APPEL A "JEFINI".
