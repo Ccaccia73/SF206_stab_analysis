@@ -93,5 +93,6 @@ ENV/
 *.mmed
 *.rmed
 *.hdf
+*.base/
 *.base/*.1.gz
 
