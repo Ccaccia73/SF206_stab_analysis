@@ -406,9 +406,9 @@ R_MOY=CALC_CHAMP(reuse =R_MOY,
                  CONTRAINTE='SIGM_NOEU',
                  CRITERES='SIEQ_NOEU',);
 
-R_MOY=CALC_ERREUR(reuse =R_MOY,
-                  RESULTAT=R_MOY,
-                  OPTION=('ERME_ELNO','ERME_NOEU',),);
+# R_MOY=CALC_ERREUR(reuse =R_MOY,
+#                   RESULTAT=R_MOY,
+#                   OPTION=('ERME_ELNO','ERME_NOEU',),);
 
 R_SUP=POST_CHAMP(RESULTAT=RESU,
                  GROUP_MA=('sh_z','sh_x',),
