@@ -371,7 +371,7 @@ BC_RBE=AFFE_CHAR_MECA(MODELE=MODEL,
                       FORCE_NODALE=(_F(GROUP_NO='C5_lnodetest',
                                        MZ=1000.0,),
                                     _F(GROUP_NO='equil_lnode',
-                                       FY=1e-06,),),);
+                                       FY=1e-10,),),);
 
 RESU=MECA_STATIQUE(MODELE=MODEL,
                    CHAM_MATER=MATER,
@@ -481,7 +481,7 @@ TB_d=POST_RELEVE_T(ACTION=(_F(OPERATION='MOYENNE',
                               POINT=(0.0,0.0,0.0,),
                               MOYE_NOEUD='OUI',),
                            _F(OPERATION='EXTRACTION',
-                              INTITULE='NodalF',
+                              INTITULE='Rib5 forces',
                               RESULTAT=RESU,
                               NOM_CHAM='FORC_NODA',
                               PRECISION=1e-06,
