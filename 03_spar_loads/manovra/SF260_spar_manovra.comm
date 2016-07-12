@@ -1,0 +1,526 @@
+
+DEBUT(LANG='EN',);
+
+# section parameters section Main spar 1-2
+
+MS12=LIRE_MAILLAGE(UNITE=21,
+                   FORMAT='MED',);
+
+secMS12=MACR_CARA_POUTRE(MAILLAGE=MS12,
+                         TABLE_CARA='OUI',
+                         GROUP_MA_BORD='border',
+                         NOM='tabMS12',
+                         GROUP_NO='node1',);
+
+IMPR_TABLE(TABLE=secMS12,
+           FORMAT='TABLEAU',
+           UNITE=7,
+           SEPARATEUR=' * ',
+           TITRE='str_12',);
+
+# section parameters section Main spar 3-4
+
+MS34=LIRE_MAILLAGE(UNITE=22,
+                   FORMAT='MED',);
+
+secMS34=MACR_CARA_POUTRE(MAILLAGE=MS34,
+                         TABLE_CARA='OUI',
+                         GROUP_MA_BORD='border',
+                         NOM='tabMS34',
+                         GROUP_NO='node1',);
+
+IMPR_TABLE(TABLE=secMS34,
+           FORMAT='TABLEAU',
+           UNITE=7,
+           SEPARATEUR=' * ',
+           TITRE='str_34',);
+
+# section parameters section Main spar 1-2
+
+MS5=LIRE_MAILLAGE(UNITE=23,
+                  FORMAT='MED',);
+
+secMS5=MACR_CARA_POUTRE(MAILLAGE=MS5,
+                        TABLE_CARA='OUI',
+                        GROUP_MA_BORD='border',
+                        NOM='tabMS5',
+                        GROUP_NO='node1',);
+
+IMPR_TABLE(TABLE=secMS5,
+           FORMAT='TABLEAU',
+           UNITE=7,
+           SEPARATEUR=' * ',
+           TITRE='str_5',);
+
+# section parameters L-shaped front stringers besides front spar 
+
+Fstr=LIRE_MAILLAGE(UNITE=24,
+                   FORMAT='MED',);
+
+sec_Fstr=MACR_CARA_POUTRE(MAILLAGE=Fstr,
+                          TABLE_CARA='OUI',
+                          GROUP_MA_BORD='border',
+                          NOM='tab_Fstr',
+                          GROUP_NO='node1',);
+
+IMPR_TABLE(TABLE=sec_Fstr,
+           FORMAT='TABLEAU',
+           UNITE=7,
+           SEPARATEUR=' * ',
+           TITRE='str_front',);
+
+# material properties
+
+A2024=DEFI_MATERIAU(ELAS=_F(E=73100.0,
+                            NU=0.33,
+                            RHO=2.78e-09,),);
+
+# original mesh for SF260
+
+MAIL=LIRE_MAILLAGE(UNITE=20,
+                   FORMAT='MED',);
+
+# orient edges for stringers
+
+MAIL=MODI_MAILLAGE(reuse =MAIL,
+                   MAILLAGE=MAIL,
+                   ORIE_LIGNE=(_F(GROUP_MA='MS_str_12_u',
+                                  VECT_TANG=(0.0,0.0,-1.0,),
+                                  GROUP_NO='MS12_up',),
+                               _F(GROUP_MA='MS_str_12_d',
+                                  VECT_TANG=(0.0,0.0,1.0,),
+                                  GROUP_NO='MS12_down',),
+                               _F(GROUP_MA='MS_str_34_u',
+                                  VECT_TANG=(0.0,0.0,-1.0,),
+                                  GROUP_NO='MS34_up',),
+                               _F(GROUP_MA='MS_str_34_d',
+                                  VECT_TANG=(0.0,0.0,1.0,),
+                                  GROUP_NO='MS34_down',),
+                               _F(GROUP_MA='MS_str_5_u',
+                                  VECT_TANG=(0.0,0.0,-1.0,),
+                                  GROUP_NO='MS5_up',),
+                               _F(GROUP_MA='MS_str_5_d',
+                                  VECT_TANG=(0.0,0.0,1.0,),
+                                  GROUP_NO='MS5_down',),
+                               _F(GROUP_MA='fs_flange_u',
+                                  VECT_TANG=(0.0,0.0,-1.0,),
+                                  GROUP_NO='fs_flange_up',),
+                               _F(GROUP_MA='fs_flange_d',
+                                  VECT_TANG=(0.0,0.0,1.0,),
+                                  GROUP_NO='fs_flange_down',),
+                               _F(GROUP_MA='f_stringer_u',
+                                  VECT_TANG=(0.0,0.0,-1.0,),
+                                  GROUP_NO='f_stringer_up',),
+                               _F(GROUP_MA='f_stringer_d',
+                                  VECT_TANG=(0.0,0.0,1.0,),
+                                  GROUP_NO='f_stringer_down',),),);
+
+# orient for ribs
+
+MAIL=MODI_MAILLAGE(reuse =MAIL,
+                   MAILLAGE=MAIL,
+                   ORIE_LIGNE=(_F(GROUP_MA='C1_u',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C1_start',),
+                               _F(GROUP_MA='C1_d',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C1_start',),
+                               _F(GROUP_MA='C2_u',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C2_start',),
+                               _F(GROUP_MA='C2_d',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C2_start',),
+                               _F(GROUP_MA='C3_u',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C3_start',),
+                               _F(GROUP_MA='C3_d',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C3_start',),
+                               _F(GROUP_MA='C4_u',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C4_start',),
+                               _F(GROUP_MA='C4_d',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C4_start',),
+                               _F(GROUP_MA='C5_u',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C5_start',),
+                               _F(GROUP_MA='C5_d',
+                                  VECT_TANG=(1.0,0.0,0.0,),
+                                  GROUP_NO='C5_start',),),);
+
+# create mesh for rbe3 nodes
+
+mesh1=CREA_MAILLAGE(MAILLAGE=MAIL,
+                    CREA_POI1=(_F(NOM_GROUP_MA='rbe_equil',
+                                  GROUP_NO='equil_lnode',),,),);
+
+MODEL=AFFE_MODELE(MAILLAGE=mesh1,
+                  AFFE=(_F(GROUP_MA=('sh_x','sh_z',),
+                           PHENOMENE='MECANIQUE',
+                           MODELISATION='DKT',),
+                        _F(GROUP_MA=('MS_str_12_u','MS_str_12_d','MS_str_34_u','MS_str_34_d','MS_str_5_u','MS_str_5_d',
+                                      'fs_flange_u','fs_flange_d','f_stringer_u','f_stringer_d','C1_u','C1_d','C2_u',
+                                      'C2_d','C3_u','C3_d','C4_u','C4_d','C5_u','C5_d',),
+                           PHENOMENE='MECANIQUE',
+                           MODELISATION='POU_D_E',),
+                        _F(GROUP_MA='rbe_equil',
+                           PHENOMENE='MECANIQUE',
+                           MODELISATION='DIS_T',),),);
+
+MATER=AFFE_MATERIAU(MODELE=MODEL,
+                    AFFE=_F(TOUT='OUI',
+                            MATER=A2024,),);
+
+# RIBS OPTIMIZED
+L_rib = 15.0;
+
+
+# RIB1
+thC1 = 0.513;
+
+
+# RIB2
+thC2 = 0.4975;
+
+
+# RIB3
+thC3 = 0.55;
+
+
+# RIB4
+thC4 = 0.526;
+
+
+# RIB5
+thC5 = 0.508;
+
+
+# FRONT SPAR
+# OPTIMIZATION
+th_fs = 1.471;
+
+th_fs1 = (2 * th_fs);
+
+l_fs = 25.0;
+
+
+# MAIN SPAR
+th_45 = 2.9;
+
+l_45 = 25.0;
+
+th_ms = 1.6;
+
+th_ms1 = 3.6;
+
+th_ms5 = (th_ms + th_45);
+
+
+CARATOT=AFFE_CARA_ELEM(MODELE=MODEL,
+                       POUTRE=(_F(SECTION='RECTANGLE',
+                                  GROUP_MA=('C1_u','C1_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(thC1,L_rib,),),
+                               _F(SECTION='RECTANGLE',
+                                  GROUP_MA=('C2_u','C2_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(thC2,L_rib,),),
+                               _F(SECTION='RECTANGLE',
+                                  GROUP_MA=('C3_u','C3_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(thC3,L_rib,),),
+                               _F(SECTION='RECTANGLE',
+                                  GROUP_MA=('C4_u','C4_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(thC4,L_rib,),),
+                               _F(SECTION='RECTANGLE',
+                                  GROUP_MA=('C5_u','C5_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(thC5,L_rib,),),
+                               _F(SECTION='GENERALE',
+                                  GROUP_MA=('f_stringer_u','f_stringer_d',),
+                                  TABLE_CARA=sec_Fstr,
+                                  NOM_SEC='tab_Fstr',),
+                               _F(SECTION='RECTANGLE',
+                                  GROUP_MA=('fs_flange_u','fs_flange_d',),
+                                  CARA=('HY','HZ',),
+                                  VALE=(l_fs,th_fs,),),
+                               _F(SECTION='GENERALE',
+                                  GROUP_MA=('MS_str_5_u','MS_str_5_d',),
+                                  TABLE_CARA=secMS5,
+                                  NOM_SEC='tabMS5',),
+                               _F(SECTION='GENERALE',
+                                  GROUP_MA=('MS_str_12_u','MS_str_12_d',),
+                                  TABLE_CARA=secMS12,
+                                  NOM_SEC='tabMS12',),
+                               _F(SECTION='GENERALE',
+                                  GROUP_MA=('MS_str_34_u','MS_str_34_d',),
+                                  TABLE_CARA=secMS34,
+                                  NOM_SEC='tabMS34',),),
+                       COQUE=(_F(GROUP_MA='C1',
+                                 EPAIS=thC1,
+                                 VECTEUR=(1.0,0.0,0.0,),),
+                              _F(GROUP_MA='C2',
+                                 EPAIS=thC2,
+                                 VECTEUR=(1.0,0.0,0.0,),),
+                              _F(GROUP_MA='C3',
+                                 EPAIS=thC3,
+                                 VECTEUR=(1.0,0.0,0.0,),),
+                              _F(GROUP_MA='C4',
+                                 EPAIS=thC4,
+                                 VECTEUR=(1.0,0.0,0.0,),),
+                              _F(GROUP_MA='C5',
+                                 EPAIS=thC5,
+                                 VECTEUR=(1.0,0.0,0.0,),),
+                              _F(GROUP_MA='pb',
+                                 EPAIS=0.81,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA='pf',
+                                 EPAIS=0.64,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA='FS1',
+                                 EPAIS=th_fs1,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA=('FS2','FS3',),
+                                 EPAIS=th_fs,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA='MS1',
+                                 EPAIS=th_ms1,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA=('MS2','MS3','MS4',),
+                                 EPAIS=th_ms,
+                                 VECTEUR=(0.0,0.0,1.0,),),
+                              _F(GROUP_MA='MS5',
+                                 EPAIS=th_ms5,
+                                 VECTEUR=(0.0,0.0,1.0,),),),
+                       DISCRET=(_F(CARA='M_T_D_N',
+                                   GROUP_MA='rbe_equil',
+                                   VALE=0.0,),
+                                _F(CARA='K_T_D_N',
+                                   GROUP_MA='rbe_equil',
+                                   VALE=(0.0,0.0,0.0,),),),
+                       ORIENTATION=(_F(CARA='VECT_Y',
+                                       GROUP_MA=('C1_u','C1_d',),
+                                       VALE=(0.0,1.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('C2_u','C2_d',),
+                                       VALE=(0.0,1.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('C3_u','C3_d',),
+                                       VALE=(0.0,1.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('C4_u','C4_d',),
+                                       VALE=(0.0,1.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('C5_u','C5_d',),
+                                       VALE=(0.0,1.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('f_stringer_u','f_stringer_d',),
+                                       VALE=(1.0,0.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('fs_flange_u','fs_flange_d',),
+                                       VALE=(1.0,0.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('MS_str_5_u','MS_str_5_d',),
+                                       VALE=(1.0,0.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('MS_str_12_u','MS_str_12_d',),
+                                       VALE=(1.0,0.0,0.0,),),
+                                    _F(CARA='VECT_Y',
+                                       GROUP_MA=('MS_str_34_u','MS_str_34_d',),
+                                       VALE=(1.0,0.0,0.0,),),),);
+
+BC_FIX=AFFE_CHAR_MECA(VERI_NORM='NON',
+                      MODELE=MODEL,
+                      DDL_IMPO=_F(GROUP_MA='fix',
+                                  LIAISON='ENCASTRE',),);
+
+Eq_load = -841.4037
+
+MS_load = [-0.02188985, -0.02175628, -0.02123674, -0.02134418, -0.02736266]
+FS_load = [ 0.01373347,  0.01249727,  0.02298115]
+
+BC_RBE=AFFE_CHAR_MECA(MODELE=MODEL,
+                      DDL_IMPO=(_F(GROUP_MA='rbe_equil',
+                                   DX=0.0,
+                                   DZ=0.0,),),
+                      LIAISON_RBE3=(_F(GROUP_NO_MAIT='equil_lnode',
+                                       DDL_MAIT='DY',
+                                       GROUP_NO_ESCL='equil_load',
+                                       DDL_ESCL='DX-DY-DZ',
+                                       COEF_ESCL=1.0,),),
+                      FORCE_NODALE=(_F(GROUP_NO='equil_lnode',
+                                       FY=Eq_load,),),
+                      FORCE_COQUE= (_F(GROUP_MA='MS1',
+                                       FY=MS_load[0]-FS_load[0],),
+                                    _F(GROUP_MA='MS2',
+                                       FY=MS_load[1]-FS_load[1],),
+                                    _F(GROUP_MA='MS3',
+                                       FY=MS_load[2]-FS_load[2],),
+                                    _F(GROUP_MA='MS4',
+                                       FY=MS_load[3],),
+                                    _F(GROUP_MA='MS5',
+                                       FY=MS_load[4],),
+                                    _F(GROUP_MA='FS1',
+                                       FY=FS_load[0],),
+                                    _F(GROUP_MA='FS2',
+                                       FY=FS_load[1],),
+                                    _F(GROUP_MA='FS3',
+                                       FY=FS_load[2],),
+                                  ),
+                      );
+
+RESU=MECA_STATIQUE(MODELE=MODEL,
+                   CHAM_MATER=MATER,
+                   CARA_ELEM=CARATOT,
+                   EXCIT=(_F(CHARGE=BC_FIX,),
+                          _F(CHARGE=BC_RBE,),),);
+
+RESU=CALC_CHAMP(reuse =RESU,
+                RESULTAT=RESU,
+                CONTRAINTE=('SIEF_ELNO','SIPO_ELNO','SIGM_ELNO',),
+                CRITERES='SIEQ_ELNO',
+                FORCE=('REAC_NODA','FORC_NODA',),);
+
+RESU=CALC_CHAMP(reuse =RESU,
+                RESULTAT=RESU,
+                GROUP_MA=
+                ('MS_str_12_u','MS_str_12_d','MS_str_34_u','MS_str_34_d','MS_str_5_u','MS_str_5_d',
+                           'fs_flange_u','fs_flange_d','f_stringer_u','f_stringer_d','C1_u','C1_d','C2_u','C2_d','C3_u',
+                           'C3_d','C4_u','C4_d','C5_u','C5_d',),
+                CONTRAINTE=('SIEF_NOEU','SIPO_NOEU',),);
+
+R_MOY=POST_CHAMP(RESULTAT=RESU,
+                 TOUT_ORDRE='OUI',
+                 GROUP_MA=('sh_z','sh_x',),
+                 EXTR_COQUE=_F(NOM_CHAM=('SIGM_ELNO','SIEQ_ELNO',),
+                               NUME_COUCHE=1,
+                               NIVE_COUCHE='MOY',),);
+
+R_MOY=CALC_CHAMP(reuse =R_MOY,
+                 RESULTAT=R_MOY,
+                 GROUP_MA=('sh_z','sh_x',),
+                 CONTRAINTE='SIGM_NOEU',
+                 CRITERES='SIEQ_NOEU',);
+
+# R_MOY=CALC_ERREUR(reuse =R_MOY,
+#                   RESULTAT=R_MOY,
+#                   OPTION=('ERME_ELNO','ERME_NOEU',),);
+
+R_SUP=POST_CHAMP(RESULTAT=RESU,
+                 GROUP_MA=('sh_z','sh_x',),
+                 EXTR_COQUE=_F(NOM_CHAM=('SIGM_ELNO','SIEQ_ELNO',),
+                               NUME_COUCHE=1,
+                               NIVE_COUCHE='SUP',),);
+
+R_SUP=CALC_CHAMP(reuse =R_SUP,
+                 RESULTAT=R_SUP,
+                 GROUP_MA=('sh_z','sh_x',),
+                 CONTRAINTE='SIGM_NOEU',
+                 CRITERES='SIEQ_NOEU',);
+
+R_INF=POST_CHAMP(RESULTAT=RESU,
+                 GROUP_MA=('sh_z','sh_x',),
+                 EXTR_COQUE=_F(NOM_CHAM=('SIGM_ELNO','SIEQ_ELNO',),
+                               NUME_COUCHE=1,
+                               NIVE_COUCHE='INF',),);
+
+R_INF=CALC_CHAMP(reuse =R_INF,
+                 RESULTAT=R_INF,
+                 GROUP_MA=('sh_z','sh_x',),
+                 CONTRAINTE='SIGM_NOEU',
+                 CRITERES='SIEQ_NOEU',);
+
+mass=POST_ELEM(MASS_INER=_F(GROUP_MA=('sh_z','sh_x','MS_str_12_u','MS_str_12_d','MS_str_34_u','MS_str_34_d','MS_str_5_u',
+                                       'MS_str_5_d','fs_flange_u','fs_flange_d','f_stringer_u','f_stringer_d','C1_u',
+                                       'C1_d','C2_u','C2_d','C3_u','C3_d','C4_u','C4_d','C5_u','C5_d',),),
+               MODELE=MODEL,
+               RESULTAT=RESU,
+               TITRE='mass',);
+
+IMPR_TABLE(TABLE=mass,
+           UNITE=7,
+           FORMAT_R='1PE12.5',
+           NOM_PARA=('LIEU','MASSE',),);
+
+TB_d=POST_RELEVE_T(ACTION=(_F(OPERATION='MOYENNE',
+                              INTITULE='avg.disp Rib5',
+                              RESULTAT=RESU,
+                              NOM_CHAM='DEPL',
+                              TOUT_ORDRE='OUI',
+                              GROUP_NO='C5load',
+                              NOM_CMP=('DX','DY','DZ','DRX','DRY','DRZ',),
+                              MOYE_NOEUD='OUI',),
+                           _F(OPERATION='MOYENNE',
+                              INTITULE='tip disp. MS',
+                              RESULTAT=RESU,
+                              NOM_CHAM='DEPL',
+                              TOUT_ORDRE='OUI',
+                              GROUP_NO='tip_b',
+                              NOM_CMP=('DX','DY','DZ','DRX','DRY','DRZ',),
+                              MOYE_NOEUD='OUI',),
+                           _F(OPERATION='EXTRACTION',
+                              INTITULE='tip displacement',
+                              RESULTAT=RESU,
+                              NOM_CHAM='DEPL',
+                              TOUT_ORDRE='OUI',
+                              GROUP_NO='tip',
+                              NOM_CMP=('DX','DY','DZ','DRX','DRY','DRZ',),
+                              MOYE_NOEUD='OUI',),
+                           _F(OPERATION='EXTRACTION',
+                              INTITULE='ReactForces',
+                              RESULTAT=RESU,
+                              NOM_CHAM='REAC_NODA',
+                              TOUT_ORDRE='OUI',
+                              GROUP_NO='fix',
+                              RESULTANTE=('DX','DY','DZ',),
+                              MOMENT=('DRX','DRY','DRZ',),
+                              POINT=(0.0,0.0,0.0,),
+                              MOYE_NOEUD='OUI',),
+                           _F(OPERATION='EXTRACTION',
+                              INTITULE='Rib5 forces',
+                              RESULTAT=RESU,
+                              NOM_CHAM='FORC_NODA',
+                              PRECISION=1e-06,
+                              GROUP_NO='C5load',
+                              RESULTANTE=('DX','DY','DZ',),
+                              MOMENT=('DRX','DRY','DRZ',),
+                              POINT=(0.0,0.0,0.0,),),),);
+
+IMPR_TABLE(TABLE=TB_d,
+           FORMAT='TABLEAU',
+           UNITE=7,
+           SEPARATEUR='  * ',
+           TITRE='spostamento nodo',);
+
+IMPR_RESU(FORMAT='MED',
+          UNITE=80,
+          RESU=_F(RESULTAT=RESU,
+                  TOUT_CHAM='OUI',
+                  GROUP_MA=
+                  ('sh_z','sh_x','MS_str_12_u','MS_str_12_d','MS_str_34_u','MS_str_34_d','MS_str_5_u',
+                             'MS_str_5_d','fs_flange_u','fs_flange_d','f_stringer_u','f_stringer_d','C1_u','C1_d','C2_u',
+                             'C2_d','C3_u','C3_d','C4_u','C4_d','C5_u','C5_d',),),);
+
+IMPR_RESU(FORMAT='MED',
+          UNITE=81,
+          RESU=(_F(RESULTAT=R_SUP,
+                   TOUT_CHAM='OUI',
+                   GROUP_MA=('sh_z','sh_x',),),
+                _F(RESULTAT=R_INF,
+                   TOUT_CHAM='OUI',
+                   GROUP_MA=('sh_z','sh_x',),),
+                _F(RESULTAT=R_MOY,
+                   TOUT_CHAM='OUI',
+                   GROUP_MA=('sh_z','sh_x',),),),);
+
+IMPR_RESU(FORMAT='MED',
+          UNITE=82,
+          RESU=_F(RESULTAT=RESU,
+                  NOM_CHAM=('DEPL','FORC_NODA','REAC_NODA',),
+                  TOUT='OUI',),);
+
+FIN();
+#CHECKSUM:f7470f2cda753c0fbe4598ab81e4fffa  -:FIN CHECKSUM
