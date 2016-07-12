@@ -1,0 +1,293 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Arsclassica Article
+% LaTeX Template
+% Version 1.1 (10/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Lorenzo Pantieri (http://www.lorenzopantieri.net) with extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+10pt, % Main document font size
+a4paper, % Paper type, use 'letterpaper' for US Letter paper
+oneside, % One page layout (no page indentation)
+%twoside, % Two page layout (page indentation for binding and different headers)
+headinclude,footinclude, % Extra spacing for the header and footer
+BCOR5mm, % Binding correction
+]{scrartcl}
+
+\input{structure.tex} % Include the structure.tex file which specified the document structure and layout
+
+\usepackage[italian]{babel}
+
+\hyphenation{Fortran hy-phen-ation} % Specify custom hyphenation points in words with dashes where you would like hyphenation to occur, or alternatively, don't put any dashes in a word to stop hyphenation altogether
+
+%----------------------------------------------------------------------------------------
+%	TITLE AND AUTHOR(S)
+%----------------------------------------------------------------------------------------
+
+\title{\normalfont\spacedallcaps{Analisi Stabilizzatore SIAI MARCHETTI SF-260}} % The article title
+
+\author{\spacedlowsmallcaps{Claudio Caccia}} % The article author(s) - author affiliations need to be specified in the AUTHOR AFFILIATIONS block
+
+\date{\today} % An optional date to appear under the author(s)
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADERS
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\sectionmark}[1]{\markright{\spacedlowsmallcaps{#1}}} % The header for all pages (oneside) or for even pages (twoside)
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection~#1}} % Uncomment when using the twoside option - this modifies the header on odd pages
+\lehead{\mbox{\llap{\small\thepage\kern1em\color{halfgray} \vline}\color{halfgray}\hspace{0.5em}\rightmark\hfil}} % The header style
+
+\pagestyle{scrheadings} % Enable the headers specified in this block
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS & LISTS OF FIGURES AND TABLES
+%----------------------------------------------------------------------------------------
+
+\maketitle % Print the title/author/date block
+
+\setcounter{tocdepth}{2} % Set the depth of the table of contents to show sections and subsections only
+
+\tableofcontents % Print the table of contents
+
+\listoffigures % Print the list of figures
+
+\listoftables % Print the list of tables
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\section*{Oggetto} % This section will not appear in the table of contents due to the star (\section*)
+
+Scopo dell'analisi consiste nell'effettuare una modellazione ad elementi finiti dello stabilizzatore del velivolo \emph{SIAI Marchetti SF-260} (cfr. Figura \ref{fig:stab260}) nelle condizioni di carico specificate nella documentazione fornita, arrivando a determinare la configurazione deformata (freccia massima, angolo di torsione, etc.) ed una stima dello stato di sforzo nella struttura.
+
+\begin{figure}[tb]
+	\centering 
+	\includegraphics[width=0.9\columnwidth]{stab.jpg} 
+	\caption[foto stabilizzatore]{Foto dello stabilizzatore} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:stab260} 
+\end{figure}
+
+%\url{http://www.mcescher.com/}
+%----------------------------------------------------------------------------------------
+%	AUTHOR AFFILIATIONS
+%----------------------------------------------------------------------------------------
+
+%{\let\thefootnote\relax\footnotetext{* \textit{Department of Biology, University of Examples, London, United Kingdom}}}
+
+%{\let\thefootnote\relax\footnotetext{\textsuperscript{1} \textit{Department of Chemistry, University of Examples, London, United Kingdom}}}
+
+%----------------------------------------------------------------------------------------
+
+\newpage % Start the article content on the second page, remove this if you have a longer abstract that goes onto the second page
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Strumenti}
+
+%A statement\footnote{Example of a footnote} requiring citation \cite{Figueredo:2009dg}.
+%Some mathematics in the text: $\cos\pi=-1$ and $\alpha$.
+
+L'analisi \emph{FEM} \`{e} stata eseguita utilizzando i seguenti sotfware di modellazione e calcolo:
+
+\begin{itemize}
+	\item \textbf{Code-Aster} \url{http://code-aster.org} (vers. 13.1) per la modellazione ad elementi finiti,
+	\item \textbf{{Salome}} \url{http://www.salome-platform.org} (vers. 7.7.1) per modellazione geometrica e mesh
+	\item \textbf{ParaView} \url{http://www.paraview.org}(vers. 4.7) per il post-processing
+	\item \textbf{Python} per ogni attivit\`{a} di calcolo
+\end{itemize}
+
+Il codice scritto per la realizzazione delle analisi \`{e} disponibile al seguente indirizzo: \url{https://github.com/Ccaccia73/SF206_stab_analysis}
+
+
+
+\section{Panoramica delle analisi}
+
+Lo studio comprende:
+
+\begin{itemize}
+	\item Unit\`{a} di misura: \textbf{SI} [N, mm, t]
+	\item Numero di geometrie: \textbf{1}
+	\item Numero di mesh: \textbf{4}
+	\item Numero di analisi FEM: \textbf{7}
+\end{itemize}
+
+Ad esse si aggiungono alcune analisi complementari per la verifica e l'ottimizzazione degli elementi ed ulteriori calcoli per la verifica della validit\`{a} delle analisi compiute.
+
+
+\section{Geometria}
+
+Le parti della geometria sono rappresentate in Figura \ref{fig:geom}, da cui sono stati soppressi i pannelli superiori per rendere visibili gli elementi:
+
+\begin{itemize}
+	\item Longherone principale (blu)
+	\item Longherone anteriore (verde)
+	\item Centine (grigio)
+	\item Pannelli posteriori (rosso)
+	\item Pannelli anteriori (giallo)
+\end{itemize}
+
+Il sistema di riferimento \`{e} illustrato in figura: l'origine \`{e} in mezzeria a met\`{a} longherone, lo stabilizzatore \`{e} diretto lungo \emph{z}, l'asse \emph{x} \`{e} diretto verso la coda e \emph{y} verso l'alto.
+
+\begin{figure}[tb]
+	\centering 
+	\includegraphics[width=0.9\columnwidth]{geom.jpg} 
+	\caption[Geometria stabilizzatore]{Geometria stab. SF260} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:geom} 
+\end{figure}
+
+\section{Mesh}
+
+\newpage
+
+\begin{enumerate}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+\item First item in a list
+\item Second item in a list
+\item Third item in a list
+\end{enumerate}
+
+%------------------------------------------------
+
+\subsection{Paragraphs}
+
+\lipsum[6] % Dummy text
+
+\paragraph{Paragraph Description} \lipsum[7] % Dummy text
+
+\paragraph{Different Paragraph Description} \lipsum[8] % Dummy text
+
+%------------------------------------------------
+
+\subsection{Math}
+
+\lipsum[4] % Dummy text
+
+\begin{equation}
+\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
+\label{eq:refname2}
+\end{equation}
+
+\lipsum[5] % Dummy text
+
+\begin{definition}[Gauss] 
+To a mathematician it is obvious that
+$\int_{-\infty}^{+\infty}
+e^{-x^2}\,dx=\sqrt{\pi}$. 
+\end{definition} 
+
+\begin{theorem}[Pythagoras]
+The square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides.
+\end{theorem}
+
+\begin{proof} 
+We have that $\log(1)^2 = 2\log(1)$.
+But we also have that $\log(-1)^2=\log(1)=0$.
+Then $2\log(-1)=0$, from which the proof.
+\end{proof}
+
+%----------------------------------------------------------------------------------------
+%	RESULTS AND DISCUSSION
+%----------------------------------------------------------------------------------------
+
+\section{Results and Discussion}
+
+\lipsum[10] % Dummy text
+
+%------------------------------------------------
+
+\subsection{Subsection}
+
+\lipsum[11] % Dummy text
+
+\subsubsection{Subsubsection}
+
+\lipsum[12] % Dummy text
+
+\begin{description}
+\item[Word] Definition
+\item[Concept] Explanation
+\item[Idea] Text
+\end{description}
+
+\lipsum[12] % Dummy text
+
+\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
+\item First item in a list
+\item Second item in a list
+\item Third item in a list
+\end{itemize}
+
+\subsubsection{Table}
+
+\lipsum[13] % Dummy text
+
+\begin{table}[hbt]
+\caption{Table of Grades}
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Name} \\
+\cmidrule(r){1-2}
+First name & Last Name & Grade \\
+\midrule
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\
+\bottomrule
+\end{tabular}
+\label{tab:label}
+\end{table}
+
+Reference to Table~\vref{tab:label}. % The \vref command specifies the location of the reference
+
+%------------------------------------------------
+
+\subsection{Figure Composed of Subfigures}
+
+Reference the figure composed of multiple subfigures as Figure~\vref{fig:esempio}. Reference one of the subfigures as Figure~\vref{fig:ipsum}. % The \vref command specifies the location of the reference
+
+\lipsum[15-18] % Dummy text
+
+\begin{figure}[tb]
+\centering
+\subfloat[A city market.]{\includegraphics[width=.45\columnwidth]{Lorem}} \quad
+\subfloat[Forest landscape.]{\includegraphics[width=.45\columnwidth]{Ipsum}\label{fig:ipsum}} \\
+\subfloat[Mountain landscape.]{\includegraphics[width=.45\columnwidth]{Dolor}} \quad
+\subfloat[A tile decoration.]{\includegraphics[width=.45\columnwidth]{Sit}}
+\caption[A number of pictures.]{A number of pictures with no common theme.} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+\label{fig:esempio}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\refname}{\spacedlowsmallcaps{References}} % For modifying the bibliography heading
+
+\bibliographystyle{unsrt}
+
+\bibliography{sample.bib} % The file containing the bibliography
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
