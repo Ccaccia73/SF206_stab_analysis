@@ -1,0 +1,56 @@
+P profastk claudio@celsius:/home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.astk
+P serveur celsius
+P username claudio
+P aster_root /opt/aster
+P platform LINUX64
+P protocol_exec asrun.plugins.server.SSHServer
+P protocol_copyto asrun.plugins.server.SCPServer
+P protocol_copyfrom asrun.plugins.server.SCPServer
+P proxy_dir /tmp
+P noeud celsius
+P mclient celsius
+P uclient claudio
+P version 13.1
+P lang en
+P debug nodebug
+P mode interactif
+P ncpus 4
+P mpi_nbcpu 1
+P mpi_nbnoeud 1
+P classe 
+P depart 
+P after_job 
+P distrib 
+P exectool 
+P multiple 
+P nomjob SF260_rib_manovra
+P origine ASTK 1.13.7
+P display celsius:1
+A args 
+A memjeveux 1024.0
+P mem_aster 100.0
+A tpmax 4320
+P memjob 8388608
+P tpsjob 72
+P nbmaxnook 5
+P cpresok RESNOOK
+P only_nook 
+P facmtps 1
+P corefilesize unlimited
+F comm /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.comm D 1
+F mmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/../SF260_rib_loads.med D 20
+F mmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/../../MSstr12.med D 21
+F mmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/../../MSstr34.med D 22
+F mmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/../../MSstr5.med D 23
+F mmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/../../Fstr.med D 24
+F erre /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.erre R 9
+F mess /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.mess R 6
+F resu /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.resu R 8
+R base /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra.base RC 0
+F rmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra_0.rmed R 80
+F rmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra_1.rmed R 81
+F rmed /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra_2.rmed R 82
+F comm /home/claudio/Documents/00_Aero/06_PSA/10_Stab260/00_Modello/SF206_stab_analysis/02_rib_loads/manovra/SF260_rib_manovra_table.txt R 7
+P consbtc oui
+P soumbtc oui
+P actions make_etude
