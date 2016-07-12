@@ -154,7 +154,7 @@ MAIL=MODI_MAILLAGE(reuse =MAIL,
 
 mesh1=CREA_MAILLAGE(MAILLAGE=MAIL,
                     CREA_POI1=(_F(NOM_GROUP_MA='rbe_equil',
-                                  GROUP_NO='equil_lnode',),,),);
+                                  GROUP_NO='equil_lnode',),),);
 
 MODEL=AFFE_MODELE(MAILLAGE=mesh1,
                   AFFE=(_F(GROUP_MA=('sh_x','sh_z',),
