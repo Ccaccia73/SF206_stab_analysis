@@ -378,6 +378,7 @@ La figura \ref{fig:Mxtest} mostra l'andamento della deformazione.
 	\label{fig:Mxtest} 
 \end{figure}
 
+\newpage
 
 \section{Calcolo tramite teoria a semiguscio}
 
@@ -473,19 +474,114 @@ La rispondenza tra il modello ad elementi finiti ed il modello a semiguscio vien
 \section{Vincoli}
 \label{sec:vincoli}
 
+Essendo la struttura simmetrica, caricata in modo simmetrico, è possibile analizzare solo la semiapertura dello stabilizzatore. Si è pertanto scelto di vincolare tramite incastro i due longheroni. In questo modo si mantiene una struttura semplice, si perdono però eventuali informazioni relative alla reale condizione di vincolo tra fusoliera e stabilizzatore, che può essere oggetto di un'analisi specifica.
 
-
+\newpage
 
 \section{Carichi}
+
+Vengono considerate due condizioni di carico ritenute significative, \emph{manovra} e \emph{raffica}. Di queste sono disponibili le azioni interne in diversi punti dello stabilizzatore (cfr. figura \ref{fig:az_dati}). Vengono qui riportati i risultati ottenuti dall'analisi dei carichi, i calcoli effettuati sono riportati qui: \url{http://nbviewer.jupyter.org/github/ccaccia73/SF206_stab_analysis/blob/master/04_carichi/actions.ipynb}.
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[manovra]{\includegraphics[width=.48\columnwidth]{01_dati_manovra.jpg}} \
+	\subfloat[raffica]{\includegraphics[width=.48\columnwidth]{01_dati_raffica.jpg}} \\
+	\caption[azioni interne: dati]{Azioni interne: dati} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:az_dati}
+\end{figure}
+
+\`{E} presente un carico concentrato a $1200 \ mm$ dalla mezzeria, in corrispondenza dell'attacco dell'equilibratore. Tale carico corrisponde ad una forza concentrata pari a:
+
+\begin{itemize}
+	\item $-841.4 \ N$ in caso di manovra
+	\item $-172.8 \ N $ in caso di raffica
+\end{itemize}
+
+Tale forza ha un braccio di $40mm$ dal longherone principale e viene modellata tramite un elemento \emph{RBE3} che agisce su una regione del longherone principale corrispondente all'attacco dell'equilibratore.\\
+
+Le componenti rimanenti sono considerate forze distribuite e si può verificare la relazione $T_y = \frac{dM_x}{dz}$ (cfr. figura \ref{fig:az_distr}):
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[az. distribuite manovra]{\includegraphics[width=.48\columnwidth]{02_azioni_distribuite_manovra.jpg}} \
+	\subfloat[az. distribuite raffica]{\includegraphics[width=.48\columnwidth]{02_azioni_distribuite_raffica.jpg}} \\
+	\subfloat[verifica manovra]{\includegraphics[width=.48\columnwidth]{03_verifica_manovra.jpg}} \
+	\subfloat[verifica raffica]{\includegraphics[width=.48\columnwidth]{03_verifica_raffica.jpg}} \\
+	\caption[azioni interne distribuite]{Azioni interne distribuite} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:az_distr}
+\end{figure}
+
+Per caricare la struttura si possono adottare diverse filosofie. Si è scelto qui di considerare e seguenti casi:
+
+\begin{enumerate}
+	\item Caricare le \emph{centine}, un elemento \emph{RBE3} posizionato sul longherone principale per ogni centina ne carica il bordo, trasmettendo $T_y$ e $M_z$. Ricalca la teoria e fornisce un'approssimazione un po' grossolana di $T_y$ e $M_z$.
+	\item Caricare con una forza superficiale costante per ogni tratto dei \emph{longheroni}. Riproduce $T_y$ in modo fedele, tuttavia l'assenza del longherone anteriore nei tratti 4 e 5 rende molto approssimato $M_z$ nel tratto finale.
+\end{enumerate} 
+
+Di seguito si illustrano le due filosofie adottate.
 
 \subsection{Carichi sulle centine}
 
 
+La figura \ref{fig:az_centine} illustra l'andamento delle azioni interne ottenuto caricando le centine.
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[$T_y$ manovra]{\includegraphics[width=.48\columnwidth]{04_Ty_centine_manovra.jpg}} \
+	\subfloat[$T_y$ raffica]{\includegraphics[width=.48\columnwidth]{04_Ty_centine_raffica.jpg}} \\
+	\subfloat[$M_x$ manovra]{\includegraphics[width=.48\columnwidth]{05_Mx_centine_manovra.jpg}} \
+	\subfloat[$M_x$ raffica]{\includegraphics[width=.48\columnwidth]{05_Mx_centine_raffica.jpg}} \\
+	\subfloat[$M_z$ manovra]{\includegraphics[width=.48\columnwidth]{06_Mz_centine_manovra.jpg}} \
+	\subfloat[$M_z$ raffica]{\includegraphics[width=.48\columnwidth]{06_Mz_centine_raffica.jpg}} \\
+	\caption[Carichi sulle centine]{Carichi sulle centine} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:az_centine}
+\end{figure}
+
+
 \subsection{Carichi sui longheroni}
 
+La figura \ref{fig:az_longh} illustra l'andamento delle azioni interne ottenuto caricando i longheroni. Si nota che, scegliendo di caricare il solo longherone anteriore per dare momento torcente, l'azione $M_z$ è replicata in modo scadente. Tuttavia, essendo una zona a basso carico l'approssimazione potrebbe essere comunque adeguata.
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[$T_y$ manovra]{\includegraphics[width=.48\columnwidth]{07_Ty_distribuito_manovra.jpg}} \
+	\subfloat[$T_y$ raffica]{\includegraphics[width=.48\columnwidth]{07_Ty_distribuito_raffica.jpg}} \\
+	\subfloat[$M_x$ manovra]{\includegraphics[width=.48\columnwidth]{08_Mx_distrib_manovra.jpg}} \
+	\subfloat[$M_x$ raffica]{\includegraphics[width=.48\columnwidth]{08_Mx_distrib_raffica.jpg}} \\
+	\subfloat[$M_z$ manovra]{\includegraphics[width=.48\columnwidth]{09_Mz_distrib_manovra.jpg}} \
+	\subfloat[$M_z$ raffica]{\includegraphics[width=.48\columnwidth]{09_Mz_distrib_raffica.jpg}} \\
+	\caption[Carichi distribuiti sui longheorni]{Carichi distribuiti sui longheroni} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:az_longh}
+\end{figure}
+
+
+\section{Materiale}
+
+Tutta la struttura è realizzata in $A2024$, materiale elastico lineare ed isotropo, di cui sono state considerate le seguenti caratteristiche \ref{tab:mat}:
+
+\begin{table}[hbt]
+	\caption{Materiale}
+	\centering
+	\begin{tabular}{lcccc}
+		\toprule
+		& \multicolumn{4}{c}{Proprietà} \\
+		\cmidrule(r){2-5}
+		& E & $\nu$ & $\rho$ & $\sigma_y$  \\
+		& $[MPa]$ &  & $[kg/m^3]$ & $[MPa]$  \\
+		\midrule
+		A2024 & $73100$ & $0.33$ & $2780$ & $324$ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:mat}
+\end{table}
 
 
 \section{Analisi}
+
+
+
 
 \newpage
 
@@ -496,48 +592,16 @@ La rispondenza tra il modello ad elementi finiti ed il modello a semiguscio vien
 
 %------------------------------------------------
 
-\subsection{Math}
-
-\lipsum[4] % Dummy text
-
-\begin{equation}
-\cos^3 \theta =\frac{1}{4}\cos\theta+\frac{3}{4}\cos 3\theta
-\label{eq:refname2}
-\end{equation}
-
-\lipsum[5] % Dummy text
-
-\begin{definition}[Gauss] 
-To a mathematician it is obvious that
-$\int_{-\infty}^{+\infty}
-e^{-x^2}\,dx=\sqrt{\pi}$. 
-\end{definition} 
-
-\begin{theorem}[Pythagoras]
-The square of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the other two sides.
-\end{theorem}
-
-\begin{proof} 
-We have that $\log(1)^2 = 2\log(1)$.
-But we also have that $\log(-1)^2=\log(1)=0$.
-Then $2\log(-1)=0$, from which the proof.
-\end{proof}
 
 %----------------------------------------------------------------------------------------
 %	RESULTS AND DISCUSSION
 %----------------------------------------------------------------------------------------
 
-\section{Results and Discussion}
+\section{Conclusioni}
 
-\lipsum[10] % Dummy text
 
 %------------------------------------------------
 
-\subsection{Subsection}
-
-\lipsum[11] % Dummy text
-
-\subsubsection{Subsubsection}
 
 \lipsum[12] % Dummy text
 
@@ -555,27 +619,9 @@ Then $2\log(-1)=0$, from which the proof.
 \item Third item in a list
 \end{itemize}
 
-\subsubsection{Table}
 
-\lipsum[13] % Dummy text
 
-\begin{table}[hbt]
-\caption{Table of Grades}
-\centering
-\begin{tabular}{llr}
-\toprule
-\multicolumn{2}{c}{Name} \\
-\cmidrule(r){1-2}
-First name & Last Name & Grade \\
-\midrule
-John & Doe & $7.5$ \\
-Richard & Miles & $2$ \\
-\bottomrule
-\end{tabular}
-\label{tab:label}
-\end{table}
-
-Reference to Table~\vref{tab:label}. % The \vref command specifies the location of the reference
+%Reference to Table~\vref{tab:label}. % The \vref command specifies the location of the reference
 
 %------------------------------------------------
 
