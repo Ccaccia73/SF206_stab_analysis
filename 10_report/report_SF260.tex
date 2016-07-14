@@ -340,7 +340,7 @@ La mesh è composta da 7271 elementi di cui:
 
 \section{Analisi Preliminari}
 
-Prima con procedere alle analisi con i carichi dovuti a raffica e manovra, si è deciso di eseguire dei test preliminari con carichi semplificati, in modo da poter eseguire un confronto con un modello analitico a semiguscio e verificare così la validità del modello finora realizzato.\\
+Prima con procedere alle analisi con i carichi dovuti a raffica e manovra, si è deciso di eseguire dei test preliminari con carichi semplificati, in modo da poter eseguire un confronto con un modello analitico a semiguscio e verificare così la validità del modello finora realizzato. Per quanto riguarda i vincoli sono state adottate le condizioni descritte in \ref{sec:vincoli}.\\
 Sono stati eseguiti due test:
 
 \begin{itemize}
@@ -367,7 +367,7 @@ La figura \ref{fig:Mztest} mostra l'andamento della deformazione.
 
 \subsection{Simulazione momento flettente}
 
-La simulazione fornisce un valore medio di rotazione intorno a \emph{x} pari a $1.55\cdot 10^{-5} rad$ ed uno spostamento medio lungo \emph{y} di $-1.01 \cdot 10^{-2}mm$.
+La simulazione fornisce un valore medio di rotazione intorno a \emph{x} pari a $1.548\cdot 10^{-5} rad$ ed uno spostamento medio lungo \emph{y} di $-1.01 \cdot 10^{-2}mm$.
 
 La figura \ref{fig:Mxtest} mostra l'andamento della deformazione.
 
@@ -404,17 +404,66 @@ La figura \ref{fig:semiguscio} illustra le 5 sezioni descritte nel modello a sem
 
 \subsection{Calcolo sezione sottoposta momento torcente}
 
+Il modello a semiguscio fornisce una stima della rigidezza torsionale $J_{ti}$ per ogni tratto dello stabilizzatore. L'angolo totale di torsione viene calcolato tramite:
 
+\begin{equation}
+	\phi = \frac{M_z}{G} \cdot \sum_{i=1}^{5} \frac{L_i}{J_{ti}}
+	\label{eq:sg_torque}
+\end{equation}
 
+con $L_i$ lunghezza del tratto i-esimo.\\
+Il calcolo fornisce un valore di $\phi = 3.021 \cdot 10^{-5}$ rad.
 
 
 
 \subsection{Calcolo sezione sottoposta momento flettente}
 
+Il modello a semiguscio fornisce una stima della rigidezza flessionale $J_{xi}$ per ogni tratto dello stabilizzatore. L'angolo di flessione all'estremità viene calcolato tramite:
 
 
+\begin{equation}
+\theta = \frac{M_x}{E} \cdot \sum_{i=1}^{5} \frac{L_i}{J_{xi}}
+\label{eq:sg_tip_flex}
+\end{equation}
 
-\subsection{Confronto dei risultati}
+Il calcolo fornisce un valore di $\theta = 1.688 \cdot 10^{-5}$ rad.
+
+Lo spostamento verticale $\delta$ dell'estremità deriva dalle seguenti espressioni:
+
+\begin{equation}
+\delta = \int_{0}^{l}M_x \cdot \frac{z-l}{EJ_x(z)}dz
+\label{eq:sg_tip1}
+\end{equation}
+
+Suddividendo l'integrale nei tratti a $J_x$ costante si ottiene:
+
+\begin{equation}
+\delta = \sum_{i=1}^{5} \frac{l_i}{EJ_{xi}} \left\{ \frac{\bar{z}_i}{2}  - l  \right\} 
+\label{eq:sg_tip2}
+\end{equation}
+
+Con $l_i$ lunghezza del tratto i-esimo e $\bar{z}_i$ posizione di metà tratto.\\
+Il calcolo fornisce un valore di $\delta = -0.0085mm$.
+
+
+\subsection{Confronto dei risultati:}
+
+\begin{table}[hbt]
+	\caption{Confronto risultati}
+	\centering
+	\begin{tabular}{lcc}
+		\toprule
+		& \multicolumn{2}{c}{Valori} \\
+		\cmidrule(r){2-3}
+		 & SG & FEM \\
+		\midrule
+		tors. $\phi \ [\mu rad]$ & $30.21$ & $31.04$ \\
+		flex. $\theta \ [\mu rad]$ & $16.88$ & $15.48$ \\
+		flex. $\delta \ [\mu m]$ & $-85$ & $-101$ \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:comp}
+\end{table}
 
 La rispondenza tra il modello ad elementi finiti ed il modello a semiguscio viene ritenuta buona, pertanto si considera il modello \emph{FEM} affidabile.
 
@@ -422,6 +471,9 @@ La rispondenza tra il modello ad elementi finiti ed il modello a semiguscio vien
 
 
 \section{Vincoli}
+\label{sec:vincoli}
+
+
 
 
 \section{Carichi}
