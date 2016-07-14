@@ -6,7 +6,7 @@
                   the revision 36893b10ca0c - branch  default                   
                         Copyright EDF R & D 1991 - 2016                         
                                                                                 
-                    Exécution of:  Tue Jul 12 13:32:53 2016                     
+                    Exécution of:  Thu Jul 14 11:55:27 2016                     
                          Name of the machine:  celsius                          
                                Structure:  64bit                                
                                CPU type:  x86_64                                
@@ -26,7 +26,7 @@
                      Version of the SCOTCH library : 5.1.10                     
                   Mémoire limite pour l'exécution : 8192.00 Mo                  
                    consommée par l'initialisation : 276.37 Mo                   
-                  par les objets du jeu de commandes : 8.76 Mo                  
+                  par les objets du jeu de commandes : 8.77 Mo                  
                  reste pour l'allocation dynamique : 7905.47 Mo                 
                    Cut limiting files of exchange:  12.00 Go                    
                                                                                 
@@ -424,7 +424,7 @@
    
 #
 #--------------------------------------------------------------------------------
-##ASTER 13.1.0 CONCEPT secMS12 CALCULE LE 07/12/2016 A 13:32:54 DE TYPE           
+##ASTER 13.1.0 CONCEPT secMS12 CALCULE LE 07/14/2016 A 11:55:29 DE TYPE           
 #TABLE_SDASTER                                                                   
 LIEU                     A            IY           IZ           AY           AZ           EY           EZ           JX           JG           IYR2         IZR2         RY           RZ           RT          
 tabMS12                   2.28760E+02  6.22831E+03  3.31309E+04  1.94878E+00  3.26368E+00  7.54486E-01  5.39855E+00  8.96681E+02  5.36309E+05 -1.51760E+03  9.60758E+04  2.35001E+01  1.50106E+01  5.73140E+00
@@ -823,7 +823,7 @@ tabMS12                   2.28760E+02  6.22831E+03  3.31309E+04  1.94878E+00  3.
    
 #
 #--------------------------------------------------------------------------------
-##ASTER 13.1.0 CONCEPT secMS34 CALCULE LE 07/12/2016 A 13:32:55 DE TYPE           
+##ASTER 13.1.0 CONCEPT secMS34 CALCULE LE 07/14/2016 A 11:55:29 DE TYPE           
 #TABLE_SDASTER                                                                   
 LIEU                     A            IY           IZ           AY           AZ           EY           EZ           JX           JG           IYR2         IZR2         RY           RZ           RT          
 tabMS34                   1.17760E+02  1.94934E+03  9.34369E+03  1.97286E+00  3.26670E+00  1.05912E-05  6.46247E+00  2.80289E+02  1.89743E+05  2.64435E+04 -1.48699E-04  1.25000E+01  1.09951E+01  2.85776E+00
@@ -1222,7 +1222,7 @@ tabMS34                   1.17760E+02  1.94934E+03  9.34369E+03  1.97286E+00  3.
    
 #
 #--------------------------------------------------------------------------------
-##ASTER 13.1.0 CONCEPT secMS5 CALCULE LE 07/12/2016 A 13:32:56 DE TYPE            
+##ASTER 13.1.0 CONCEPT secMS5 CALCULE LE 07/14/2016 A 11:55:30 DE TYPE            
 #TABLE_SDASTER                                                                   
 LIEU                     A            IY           IZ           AY           AZ           EY           EZ           JX           JG           IYR2         IZR2         RY           RZ           RT          
 tabMS5                    1.90260E+02  2.08287E+03  4.13758E+04  1.46593E+00  4.90115E+00 -7.37279E+00  3.04168E+00  4.84332E+02  3.39085E+05  2.20655E+04 -5.75405E+04  2.81204E+01  1.21541E+01  3.48092E+00
@@ -1621,7 +1621,7 @@ tabMS5                    1.90260E+02  2.08287E+03  4.13758E+04  1.46593E+00  4.
    
 #
 #--------------------------------------------------------------------------------
-##ASTER 13.1.0 CONCEPT sec_Fstr CALCULE LE 07/12/2016 A 13:32:56 DE TYPE          
+##ASTER 13.1.0 CONCEPT sec_Fstr CALCULE LE 07/14/2016 A 11:55:30 DE TYPE          
 #TABLE_SDASTER                                                                   
 LIEU                     A            IY           IZ           AY           AZ           EY           EZ           JX           JG           IYR2         IZR2         RY           RZ           RT          
 tab_Fstr                  7.74400E+01  1.91031E+03  7.56692E+03  2.32508E+00  2.36154E+00  2.59932E-06  8.50289E+00  6.10486E+01  3.60158E+03  3.21595E+04 -1.72821E-05  1.76777E+01  9.67801E+00  1.75041E+00
@@ -2161,59 +2161,59 @@ tab_Fstr                  7.74400E+01  1.91031E+03  7.56692E+03  2.32508E+00  2.
   
  <I> <FIN> MEMOIRE JEVEUX MINIMALE REQUISE POUR L'EXECUTION :                      65.40 Mo
  <I> <FIN> MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :                     191.34 Mo
- <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     514.43 Mo
+ <I> <FIN> MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS LORS DE L'EXECUTION :     514.41 Mo
 
  ********************************************************************************
  * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
  ********************************************************************************
- * init (jdc)               :       0.25 :       0.02 :       0.27 :       0.28 *
- *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
- *  . exec_compile          :       0.08 :       0.00 :       0.08 :       0.09 *
+ * init (jdc)               :       0.26 :       0.03 :       0.29 :       0.70 *
+ *  . compile               :       0.01 :       0.00 :       0.01 :       0.00 *
+ *  . exec_compile          :       0.08 :       0.01 :       0.09 :       0.19 *
  *  . report                :       0.03 :       0.00 :       0.03 :       0.03 *
  *  . build                 :       0.00 :       0.00 :       0.00 :       0.00 *
- * DEBUT                    :       0.01 :       0.02 :       0.03 :       0.02 *
- * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
- * MACR_CARA_POUTRE         :       1.08 :       0.01 :       1.09 :       1.07 *
- * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.01 *
- * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
- * MACR_CARA_POUTRE         :       0.42 :       0.04 :       0.46 :       0.44 *
+ * DEBUT                    :       0.01 :       0.03 :       0.04 :       0.28 *
+ * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.07 *
+ * MACR_CARA_POUTRE         :       1.08 :       0.00 :       1.08 :       1.33 *
+ * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
+ * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.00 *
+ * MACR_CARA_POUTRE         :       0.41 :       0.02 :       0.43 :       0.42 *
  * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
  * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
- * MACR_CARA_POUTRE         :       0.85 :       0.02 :       0.87 :       0.85 *
- * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.01 *
- * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.00 *
- * MACR_CARA_POUTRE         :       0.32 :       0.02 :       0.34 :       0.33 *
+ * MACR_CARA_POUTRE         :       0.85 :       0.01 :       0.86 :       0.85 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * LIRE_MAILLAGE            :       0.00 :       0.00 :       0.00 :       0.00 *
+ * MACR_CARA_POUTRE         :       0.31 :       0.02 :       0.33 :       0.32 *
  * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.01 *
  * DEFI_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.00 *
- * LIRE_MAILLAGE            :       0.12 :       0.01 :       0.13 :       0.13 *
+ * LIRE_MAILLAGE            :       0.13 :       0.01 :       0.14 :       0.13 *
  * MODI_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.02 *
  * MODI_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
- * CREA_MAILLAGE            :       0.05 :       0.00 :       0.05 :       0.05 *
- * AFFE_MODELE              :       0.01 :       0.00 :       0.01 :       0.00 *
- * AFFE_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.01 *
- * AFFE_CARA_ELEM           :       0.21 :       0.01 :       0.22 :       0.21 *
+ * CREA_MAILLAGE            :       0.05 :       0.00 :       0.05 :       0.04 *
+ * AFFE_MODELE              :       0.01 :       0.00 :       0.01 :       0.01 *
+ * AFFE_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.00 *
+ * AFFE_CARA_ELEM           :       0.20 :       0.01 :       0.21 :       0.22 *
  * AFFE_CHAR_MECA           :       0.00 :       0.00 :       0.00 :       0.01 *
  * AFFE_CHAR_MECA           :       0.03 :       0.01 :       0.04 :       0.04 *
- * MECA_STATIQUE            :       5.32 :       0.06 :       5.38 :       2.72 *
- * CALC_CHAMP               :       0.36 :       0.00 :       0.36 :       0.37 *
+ * MECA_STATIQUE            :       4.87 :       0.07 :       4.94 :       2.61 *
+ * CALC_CHAMP               :       0.34 :       0.02 :       0.36 :       0.37 *
  * CALC_CHAMP               :       0.03 :       0.00 :       0.03 :       0.03 *
- * POST_CHAMP               :       0.02 :       0.00 :       0.02 :       0.01 *
- * CALC_CHAMP               :       0.70 :       0.02 :       0.72 :       0.72 *
  * POST_CHAMP               :       0.02 :       0.00 :       0.02 :       0.02 *
- * CALC_CHAMP               :       0.71 :       0.02 :       0.73 :       0.72 *
+ * CALC_CHAMP               :       0.73 :       0.00 :       0.73 :       0.73 *
  * POST_CHAMP               :       0.01 :       0.00 :       0.01 :       0.02 *
- * CALC_CHAMP               :       0.72 :       0.01 :       0.73 :       0.72 *
- * POST_ELEM                :       0.24 :       0.00 :       0.24 :       0.25 *
- * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
- * POST_RELEVE_T            :       0.03 :       0.00 :       0.03 :       0.04 *
- * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
- * IMPR_RESU                :       0.26 :       0.02 :       0.28 :       0.29 *
- * IMPR_RESU                :       0.32 :       0.01 :       0.33 :       0.33 *
- * IMPR_RESU                :       0.05 :       0.00 :       0.05 :       0.04 *
- * FIN                      :       0.03 :       0.04 :       0.07 :       0.08 *
- *  . part Superviseur      :       0.63 :       0.07 :       0.70 :       0.66 *
- *  . part Fortran          :      11.63 :       0.27 :      11.90 :       9.25 *
+ * CALC_CHAMP               :       0.73 :       0.01 :       0.74 :       0.73 *
+ * POST_CHAMP               :       0.02 :       0.00 :       0.02 :       0.02 *
+ * CALC_CHAMP               :       0.72 :       0.01 :       0.73 :       0.73 *
+ * POST_ELEM                :       0.25 :       0.00 :       0.25 :       0.25 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * POST_RELEVE_T            :       0.04 :       0.00 :       0.04 :       0.04 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * IMPR_RESU                :       0.27 :       0.02 :       0.29 :       0.29 *
+ * IMPR_RESU                :       0.31 :       0.02 :       0.33 :       0.33 *
+ * IMPR_RESU                :       0.04 :       0.00 :       0.04 :       0.05 *
+ * FIN                      :       0.02 :       0.06 :       0.08 :       0.08 *
+ *  . part Superviseur      :       0.61 :       0.06 :       0.67 :       1.52 *
+ *  . part Fortran          :      11.21 :       0.29 :      11.50 :       9.41 *
  ********************************************************************************
- * TOTAL_JOB                :      12.27 :       0.34 :      12.61 :       9.91 *
+ * TOTAL_JOB                :      11.82 :       0.35 :      12.17 :      10.94 *
  ********************************************************************************
 

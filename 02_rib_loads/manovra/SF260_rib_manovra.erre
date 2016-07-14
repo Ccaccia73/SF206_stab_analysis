@@ -6,7 +6,7 @@
                   the revision 36893b10ca0c - branch  default                   
                         Copyright EDF R & D 1991 - 2016                         
                                                                                 
-                    Exécution of:  Tue Jul 12 13:32:53 2016                     
+                    Exécution of:  Thu Jul 14 11:55:27 2016                     
                          Name of the machine:  celsius                          
                                Structure:  64bit                                
                                CPU type:  x86_64                                
@@ -26,7 +26,7 @@
                      Version of the SCOTCH library : 5.1.10                     
                   Mémoire limite pour l'exécution : 8192.00 Mo                  
                    consommée par l'initialisation : 276.37 Mo                   
-                  par les objets du jeu de commandes : 8.76 Mo                  
+                  par les objets du jeu de commandes : 8.77 Mo                  
                  reste pour l'allocation dynamique : 7905.47 Mo                 
                    Cut limiting files of exchange:  12.00 Go                    
                                                                                 

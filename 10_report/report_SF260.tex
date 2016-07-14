@@ -124,16 +124,18 @@ Il codice scritto per la realizzazione delle analisi \`{e} disponibile al seguen
 
 \section{Panoramica delle analisi}
 
+Unit\`{a} di misura adottate: \textbf{SI} [N, mm, t]\\
+\\
+
 Lo studio comprende:
 
 \begin{itemize}
-	\item Unit\`{a} di misura: \textbf{SI} [N, mm, t]
 	\item Numero di geometrie: \textbf{1}
 	\item Numero di mesh: \textbf{3}
 	\item Numero di analisi FEM: \textbf{6}
 \end{itemize}
 
-Ad esse si aggiungono alcune analisi complementari per la verifica e l'ottimizzazione degli elementi ed ulteriori calcoli per la verifica della validit\`{a} delle analisi compiute.
+Ad esse si aggiungono alcune analisi complementari per la verifica e l'ottimizzazione dei componenti ed ulteriori calcoli per la verifica della validit\`{a} delle analisi compiute.
 
 
 \section{Geometria}
@@ -160,16 +162,16 @@ Il sistema di riferimento è illustrato in figura: l'origine è in mezzeria a me
 
 \section{Caratterizzazione degli elementi}
 
-Prima di procedere all'analisi è necessario caratterizzare opportunamente le componenti dello stabilizzatore, con l'intento di semplificare la struttura il più possibile senza perdere significatività. 
+Prima di procedere all'analisi è necessario caratterizzare opportunamente le componenti dello stabilizzatore, con l'intento di semplificare la struttura il più possibile senza perdere significatività dei risultati. 
 
 \subsection{Centine}
 
-La struttura delle 5 centine è composta da un'anima spessa 0.64mm e due flange lunghe 15mm. La numerazione parte dalla mezzeria. Le prime 4 centine sono caratterizzate da fori di alleggerimento.
+La struttura delle 5 centine è composta da un'anima spessa 0.64mm e due flange larghe 15mm. La numerazione parte dalla mezzeria. Le prime 4 centine sono caratterizzate da fori di alleggerimento.\\
 Per semplificare il modello si è scelto di modellare la centina con le seguenti caratteristiche:
 
 \begin{itemize}
 	\item Sono stati trascurati i fori di alleggerimento,
-	\item l'anima è stata modellata con elementi di tipo \emph{plate},
+	\item l'anima è stata modellata con elementi di tipo \emph{shell},
 	\item le flange sono state modellate con elementi di tipo \emph{beam}.
 \end{itemize} 
 
@@ -191,7 +193,7 @@ Per ogni centina sono state condotte le seguenti analisi:
 
 Nelle figure \ref{fig:C1_comp} e \ref{fig:C1plot}  si riportano ad esempio i risultati ottenuti per la \emph{centina 1}.
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
 	\subfloat[Centina 1: deformazione flessionale]{\includegraphics[width=.90\columnwidth]{C1_comp_DY.png}\label{fig:C1_DY}} \\
 	\subfloat[Centina 1: VM stress]{\includegraphics[width=.90\columnwidth]{C1_comp_VMIS.png}\label{fig:C1_VM}} \\
@@ -199,7 +201,7 @@ Nelle figure \ref{fig:C1_comp} e \ref{fig:C1plot}  si riportano ad esempio i ris
 	\label{fig:C1_comp}
 \end{figure}
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
 	\subfloat[Centina 1: VM stress root]{\includegraphics[width=.90\columnwidth]{C1_VM_root}\label{fig:C1_root}} \\
 	\subfloat[Centina 1: VM stress @53.5mm]{\includegraphics[width=.90\columnwidth]{C1_VM_535}\label{fig:C1_535}} \\
@@ -210,7 +212,7 @@ Nelle figure \ref{fig:C1_comp} e \ref{fig:C1plot}  si riportano ad esempio i ris
 La figura \ref{fig:C1plot} fornisce un'indicazione sull'incremento degli sforzi nella centina (all'incastro ed in corrispondenza del primo foro, a $53.5mm$ dall'incastro) per effetto della presenza dei fori.
 
 
-\begin{table}[hbt]
+\begin{table}[bt]
 	\caption{Risultati delle analisi sulle centina}
 	\centering
 	\begin{tabular}{rcccccc}
@@ -236,18 +238,18 @@ La tabella \ref{tab:centine} mostra come, a parità di rigidezza flessionale, le
 
 \subsection{Longherone anteriore}
 
-Il longherone anteriore (LA) è lungo $740mm$, ha uno spessore di $1.6mm$ ed è disposto dalla mezzeria fino alla centina 3. Come le centine ha una struttura a \textquotedblleft C\textquotedblright con fori di alleggerimento e un irrigidimento nella parte centrale.
+Il longherone anteriore (LA) è lungo $740mm$, ha uno spessore di $1.6mm$ ed è disposto dalla mezzeria fino alla centina 3. Come le centine ha una struttura a \textquotedblleft C\textquotedblright con fori di alleggerimento. Presenta inoltre un irrigidimento nella parte centrale.
 Si operano semplificazioni simili a quelle adottate per le centine:
 
 \begin{itemize}
-	\item Modellizzazione dell'anima a \emph{plate} e delle flange a \emph{beam}
+	\item Modellizzazione dell'anima a \emph{shell} e delle flange a \emph{beam}
 	\item eliminazione dei fori e determinazione di uno spessore equivalente
 \end{itemize}
 
 Nelle figure \ref{fig:FS_compl} e \ref{fig:FS_simp} si riportano i risultati ottenuti.
 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
 	\subfloat[LA: sforzi ed azioni]{\includegraphics[width=.90\columnwidth]{FS_compl_VM.png}\label{fig:FSc_VM}} \\
 	\subfloat[LA: deformazione]{\includegraphics[width=.90\columnwidth]{FS_compl_DY.png}\label{fig:FSc_DY}} \\
@@ -256,7 +258,7 @@ Nelle figure \ref{fig:FS_compl} e \ref{fig:FS_simp} si riportano i risultati ott
 \end{figure}
 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
 	\subfloat[LA: sforzi ed azioni]{\includegraphics[width=.90\columnwidth]{FS_simp_str.png}\label{fig:FSs_VM}} \\
 	\subfloat[LA: deformazione]{\includegraphics[width=.90\columnwidth]{FS_simp_DY.png}\label{fig:FSs_DY}} \\
@@ -289,7 +291,7 @@ La tabella \ref{tab:FS} riporta la sintesi dei risultati ottenuti.
 Il longherone principale (LP) è privo di fori di alleggerimento, ha degli irrigidimenti in corrispondenza della zona centrale e tra le centine 4 e 5, inoltre ha un corrente a \textquotedblleft U\textquotedblright \ per tutta la lunghezza ed un corrente a \textquotedblleft L\textquotedblright fino alla distanza di $510mm$. \`{E} stato modellato direttamente nel sistema completo, con le seguenti caratteristiche:
 
 \begin{itemize}
-	\item spessori (elementi di tipo \emph{plate}) nelle 5 sezioni del LP:
+	\item spessori (elementi di tipo \emph{shell}) nelle 5 sezioni del LP:
 	\begin{itemize}
 		\item $1.6+2mm$ nella sezione 1, tenendo condo in modo semplificato dell'irrigidimento
 		\item $1.6mm$ nelle sezioni 2,3 e 4
@@ -303,6 +305,7 @@ Il longherone principale (LP) è privo di fori di alleggerimento, ha degli irrig
 	\end{itemize}
 \end{itemize}
 
+\newpage
 
 \subsection{Correnti}
 
@@ -310,26 +313,26 @@ Oltre ai correnti nel longherone principale sono presenti dei correnti a \textqu
 
 \subsection{Pannelli}
 
-Tutti i pannelli vengono modellati con elementi di tipo \emph{plate}, spessi $0.64mm$ nella parte anteriore (fino al LA o ai correnti) e $0.81mm$ nella parte posteriore. 
+Tutti i pannelli vengono modellati con elementi di tipo \emph{shell}, spessi $0.64mm$ nella parte anteriore (fino al LA o ai correnti) e $0.81mm$ nella parte posteriore. 
 
 
 \newpage
 
 \section{Mesh}
 
-La mesh è stata generata elemento per elemento, realizzando poi un'unica \emph{compound mesh} e verificando che gli elementi (nodi e spigoli) fossero coincidenti.
-La mesh è composta da 7271 elementi di cui:
+La mesh è stata generata per ogni componente, realizzando poi un'unica \emph{compound mesh} e verificando che gli elementi (nodi e spigoli) fossero coincidenti.
+La mesh è composta da 7271 elementi lineari di cui:
 
 \begin{itemize}
 	\item $7138$ elementi di tipo \emph{QUAD4}
 	\item $133$ elementi di tipo \emph{TRIA3}
 \end{itemize} 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
-	\subfloat[mesh: pannelli]{\includegraphics[width=.90\columnwidth]{mesh1.jpg}\label{fig:mesh1}} \\
-	\subfloat[mesh: centine e longheroni]{\includegraphics[width=.90\columnwidth]{mesh2.jpg}\label{fig:mesh2}} \\
-	\subfloat[mesh: elementi beam]{\includegraphics[width=.90\columnwidth]{mesh3.jpg}\label{fig:mesh3}} \\
+	\subfloat[mesh: pannelli]{\includegraphics[width=.98\columnwidth]{mesh1.jpg}\label{fig:mesh1}} \\
+	\subfloat[mesh: centine e longheroni]{\includegraphics[width=.98\columnwidth]{mesh2.jpg}\label{fig:mesh2}} \\
+	\subfloat[mesh: elementi beam]{\includegraphics[width=.98\columnwidth]{mesh3.jpg}\label{fig:mesh3}} \\
 	\caption[Mesh Stabilizzatore SF260]{mesh dello stabilizzatore} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:mesh}
 \end{figure}
@@ -340,12 +343,12 @@ La mesh è composta da 7271 elementi di cui:
 
 \section{Analisi Preliminari}
 
-Prima con procedere alle analisi con i carichi dovuti a raffica e manovra, si è deciso di eseguire dei test preliminari con carichi semplificati, in modo da poter eseguire un confronto con un modello analitico a semiguscio e verificare così la validità del modello finora realizzato. Per quanto riguarda i vincoli sono state adottate le condizioni descritte in \ref{sec:vincoli}.\\
+Prima di procedere alle analisi con i carichi dovuti a raffica e manovra, si è deciso di eseguire dei test preliminari con carichi semplificati, in modo da poter eseguire un confronto con un modello analitico a semiguscio e verificare così la validità del modello finora realizzato. Per quanto riguarda i vincoli sono state adottate le condizioni descritte in \ref{sec:vincoli}.\\
 Sono stati eseguiti due test:
 
 \begin{itemize}
-	\item Momento torcente $M_z = 1000 N \cdot mm$ applicato alla centina 5 tramite un elemento di tipo \emph{RBE3}	
-	\item Momento flettente $M_x = 1000 N \cdot mm$ applicato alla centina 5 tramite un elemento di tipo \emph{RBE3}
+	\item Momento torcente $M_z = 1000 \ Nmm$ applicato alla centina 5 tramite un elemento di tipo \emph{RBE3}	
+	\item Momento flettente $M_x = 1000 \ Nmm$ applicato alla centina 5 tramite un elemento di tipo \emph{RBE3}
 \end{itemize}
 
 Sono stati poi misurati gli spostamenti medi e le rotazioni medie della centina 5 e confrontati con i risultati analitici.
@@ -356,7 +359,7 @@ La simulazione fornisce un valore medio di rotazione intorno a \emph{z} pari a $
 
 La figura \ref{fig:Mztest} mostra l'andamento della deformazione.
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering 
 	\includegraphics[width=0.9\columnwidth]{Mz_test.png} 
 	\caption[Test Mz]{Test momento torcente} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
@@ -382,23 +385,23 @@ La figura \ref{fig:Mxtest} mostra l'andamento della deformazione.
 
 \section{Calcolo tramite teoria a semiguscio}
 
-Per il corso di \emph{Strutture Aerospaziali} avevo sviluppato un programma per il calcolo dei parametri delle sezioni a semiguscio. Il codice è disponibile qui: \url{https://github.com/Ccaccia73/semimonocoque}. In particolare, i calcoli sono riportati qui: \url{http://nbviewer.jupyter.org/github/ccaccia73/semimonocoque/blob/master/10_Stab_SF260.ipynb} .
+Per il corso di \emph{Strutture Aerospaziali} avevo sviluppato un programma per il calcolo dei parametri delle sezioni a semiguscio. Il codice è disponibile qui: \url{https://github.com/Ccaccia73/semimonocoque}. In particolare, i calcoli eseguiti per lo stabilizzatore sono riportati qui: \url{http://nbviewer.jupyter.org/github/ccaccia73/semimonocoque/blob/master/10_Stab_SF260.ipynb}
 
 \subsection{Modello a semiguscio}
 
-Lo stabilizzatore è stato suddiviso in 5 sezioni. Come larghezza è stata considerato il valore medio del tratto in esame. Si è trascurato l'angolo di inclinazione della centina 1 e sono state considerate le aree e gli spessori determinati in precedenza. Per i longheroni si è utilizzato il metodo dell'\emph{area collaborante}.
+Lo stabilizzatore è stato suddiviso in 5 sezioni. Come dimensione in direzione \emph{x} è stato considerato il valore medio del tratto in esame. Si è trascurato l'angolo di inclinazione della centina 1 e sono state considerate le aree e gli spessori determinati in precedenza per il modello FEM. Per i longheroni si è utilizzato il metodo dell'\emph{area collaborante}.
 
 La figura \ref{fig:semiguscio} illustra le 5 sezioni descritte nel modello a semiguscio. I valori dei parametri sono visibili al link sopra.
 
 
 \begin{figure}[tb]
 	\centering
-	\subfloat[Sezione 1]{\includegraphics[width=.45\columnwidth]{sect1.jpg}} \quad
-	\subfloat[Sezione 2]{\includegraphics[width=.45\columnwidth]{sect2.jpg}} \\
-	\subfloat[Sezione 3]{\includegraphics[width=.45\columnwidth]{sect3.jpg}} \quad
-	\subfloat[Sezione 4]{\includegraphics[width=.45\columnwidth]{sect4.jpg}} \\
-	\subfloat[Sezione 5]{\includegraphics[width=.45\columnwidth]{sect5.jpg}} \\
-	\caption[descrizione a semiguscio]{Sezioni a semiguscio dello stabilizzatore} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\subfloat[Sezione 1]{\includegraphics[width=.485\columnwidth]{sect1.jpg}} \quad
+	\subfloat[Sezione 2]{\includegraphics[width=.485\columnwidth]{sect2.jpg}} \\
+	\subfloat[Sezione 3]{\includegraphics[width=.485\columnwidth]{sect3.jpg}} \quad
+	\subfloat[Sezione 4]{\includegraphics[width=.485\columnwidth]{sect4.jpg}} \\
+	\subfloat[Sezione 5]{\includegraphics[width=.485\columnwidth]{sect5.jpg}} \\
+	\caption[modello a semiguscio]{Sezioni a semiguscio dello stabilizzatore} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:semiguscio}
 \end{figure}
 
@@ -468,24 +471,21 @@ Il calcolo fornisce un valore di $\delta = -0.0085mm$.
 
 La rispondenza tra il modello ad elementi finiti ed il modello a semiguscio viene ritenuta buona, pertanto si considera il modello \emph{FEM} affidabile.
 
-\newpage
-
 
 \section{Vincoli}
 \label{sec:vincoli}
 
 Essendo la struttura simmetrica, caricata in modo simmetrico, è possibile analizzare solo la semiapertura dello stabilizzatore. Si è pertanto scelto di vincolare tramite incastro i due longheroni. In questo modo si mantiene una struttura semplice, si perdono però eventuali informazioni relative alla reale condizione di vincolo tra fusoliera e stabilizzatore, che può essere oggetto di un'analisi specifica.
 
-\newpage
 
 \section{Carichi}
 
-Vengono considerate due condizioni di carico ritenute significative, \emph{manovra} e \emph{raffica}. Di queste sono disponibili le azioni interne in diversi punti dello stabilizzatore (cfr. figura \ref{fig:az_dati}). Vengono qui riportati i risultati ottenuti dall'analisi dei carichi, i calcoli effettuati sono riportati qui: \url{http://nbviewer.jupyter.org/github/ccaccia73/SF206_stab_analysis/blob/master/04_carichi/actions.ipynb}.
+Vengono considerate due condizioni di carico ritenute significative, \emph{manovra} e \emph{raffica}. Di queste sono disponibili le azioni interne in diversi punti dello stabilizzatore (cfr. figura \ref{fig:az_dati}). Vengono qui riportati i risultati ottenuti dall'analisi dei carichi, i calcoli effettuati sono riportati qui:\\ \url{http://nbviewer.jupyter.org/github/ccaccia73/SF206_stab_analysis/blob/master/04_carichi/actions.ipynb}.
 
 \begin{figure}[htb]
 	\centering
-	\subfloat[manovra]{\includegraphics[width=.48\columnwidth]{01_dati_manovra.jpg}} \
-	\subfloat[raffica]{\includegraphics[width=.48\columnwidth]{01_dati_raffica.jpg}} \\
+	\subfloat[manovra]{\includegraphics[width=.485\columnwidth]{01_dati_manovra.jpg}} \
+	\subfloat[raffica]{\includegraphics[width=.485\columnwidth]{01_dati_raffica.jpg}} \\
 	\caption[azioni interne: dati]{Azioni interne: dati} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:az_dati}
 \end{figure}
@@ -497,25 +497,25 @@ Vengono considerate due condizioni di carico ritenute significative, \emph{manov
 	\item $-172.8 \ N $ in caso di raffica
 \end{itemize}
 
-Tale forza ha un braccio di $40mm$ dal longherone principale e viene modellata tramite un elemento \emph{RBE3} che agisce su una regione del longherone principale corrispondente all'attacco dell'equilibratore.\\
+Tale forza ha un braccio di $40mm$ dal longherone principale e viene modellata tramite un elemento \emph{RBE3} che agisce su una regione del longherone principale corrispondente alla piastra di connessione con l'equilibratore.\\
 
-Le componenti rimanenti sono considerate forze distribuite e si può verificare la relazione $T_y = \frac{dM_x}{dz}$ (cfr. figura \ref{fig:az_distr}):
+Le componenti rimanenti sono considerate forze distribuite e si può verificare la relazione $T_y = \frac{dM_x}{dz}$ (cfr. figura \ref{fig:az_distr}, a meno del segno):
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
-	\subfloat[az. distribuite manovra]{\includegraphics[width=.48\columnwidth]{02_azioni_distribuite_manovra.jpg}} \
-	\subfloat[az. distribuite raffica]{\includegraphics[width=.48\columnwidth]{02_azioni_distribuite_raffica.jpg}} \\
-	\subfloat[verifica manovra]{\includegraphics[width=.48\columnwidth]{03_verifica_manovra.jpg}} \
-	\subfloat[verifica raffica]{\includegraphics[width=.48\columnwidth]{03_verifica_raffica.jpg}} \\
+	\subfloat[az. distribuite manovra]{\includegraphics[width=.485\columnwidth]{02_azioni_distribuite_manovra.jpg}} \
+	\subfloat[az. distribuite raffica]{\includegraphics[width=.485\columnwidth]{02_azioni_distribuite_raffica.jpg}} \\
+	\subfloat[verifica manovra]{\includegraphics[width=.485\columnwidth]{03_verifica_manovra.jpg}} \
+	\subfloat[verifica raffica]{\includegraphics[width=.485\columnwidth]{03_verifica_raffica.jpg}} \\
 	\caption[azioni interne distribuite]{Azioni interne distribuite} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:az_distr}
 \end{figure}
 
-Per caricare la struttura si possono adottare diverse filosofie. Si è scelto qui di considerare e seguenti casi:
+Per caricare la struttura si possono adottare diverse filosofie. Si è scelto qui di considerare i seguenti casi:
 
 \begin{enumerate}
 	\item Caricare le \emph{centine}, un elemento \emph{RBE3} posizionato sul longherone principale per ogni centina ne carica il bordo, trasmettendo $T_y$ e $M_z$. Ricalca la teoria e fornisce un'approssimazione un po' grossolana di $T_y$ e $M_z$.
-	\item Caricare con una forza superficiale costante per ogni tratto dei \emph{longheroni}. Riproduce $T_y$ in modo fedele, tuttavia l'assenza del longherone anteriore nei tratti 4 e 5 rende molto approssimato $M_z$ nel tratto finale.
+	\item Caricare con una forza superficiale costante ogni sezione dei \emph{longheroni}. Riproduce $T_y$ in modo fedele, tuttavia l'assenza del longherone anteriore nelle sezioni 4 e 5 rende molto approssimato $M_z$ nel tratto esterno dello stabilizzatore.
 \end{enumerate} 
 
 Di seguito si illustrano le due filosofie adottate.
@@ -526,14 +526,14 @@ Di seguito si illustrano le due filosofie adottate.
 La figura \ref{fig:az_centine} illustra l'andamento delle azioni interne ottenuto caricando le centine.
 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
-	\subfloat[$T_y$ manovra]{\includegraphics[width=.48\columnwidth]{04_Ty_centine_manovra.jpg}} \
-	\subfloat[$T_y$ raffica]{\includegraphics[width=.48\columnwidth]{04_Ty_centine_raffica.jpg}} \\
-	\subfloat[$M_x$ manovra]{\includegraphics[width=.48\columnwidth]{05_Mx_centine_manovra.jpg}} \
-	\subfloat[$M_x$ raffica]{\includegraphics[width=.48\columnwidth]{05_Mx_centine_raffica.jpg}} \\
-	\subfloat[$M_z$ manovra]{\includegraphics[width=.48\columnwidth]{06_Mz_centine_manovra.jpg}} \
-	\subfloat[$M_z$ raffica]{\includegraphics[width=.48\columnwidth]{06_Mz_centine_raffica.jpg}} \\
+	\subfloat[$T_y$ manovra]{\includegraphics[width=.485\columnwidth]{04_Ty_centine_manovra.jpg}} \
+	\subfloat[$T_y$ raffica]{\includegraphics[width=.485\columnwidth]{04_Ty_centine_raffica.jpg}} \\
+	\subfloat[$M_x$ manovra]{\includegraphics[width=.485\columnwidth]{05_Mx_centine_manovra.jpg}} \
+	\subfloat[$M_x$ raffica]{\includegraphics[width=.485\columnwidth]{05_Mx_centine_raffica.jpg}} \\
+	\subfloat[$M_z$ manovra]{\includegraphics[width=.485\columnwidth]{06_Mz_centine_manovra.jpg}} \
+	\subfloat[$M_z$ raffica]{\includegraphics[width=.485\columnwidth]{06_Mz_centine_raffica.jpg}} \\
 	\caption[Carichi sulle centine]{Carichi sulle centine} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:az_centine}
 \end{figure}
@@ -544,14 +544,14 @@ La figura \ref{fig:az_centine} illustra l'andamento delle azioni interne ottenut
 La figura \ref{fig:az_longh} illustra l'andamento delle azioni interne ottenuto caricando i longheroni. Si nota che, scegliendo di caricare il solo longherone anteriore per dare momento torcente, l'azione $M_z$ è replicata in modo scadente. Tuttavia, essendo una zona a basso carico l'approssimazione potrebbe essere comunque adeguata.
 
 
-\begin{figure}[htb]
+\begin{figure}[tb]
 	\centering
-	\subfloat[$T_y$ manovra]{\includegraphics[width=.48\columnwidth]{07_Ty_distribuito_manovra.jpg}} \
-	\subfloat[$T_y$ raffica]{\includegraphics[width=.48\columnwidth]{07_Ty_distribuito_raffica.jpg}} \\
-	\subfloat[$M_x$ manovra]{\includegraphics[width=.48\columnwidth]{08_Mx_distrib_manovra.jpg}} \
-	\subfloat[$M_x$ raffica]{\includegraphics[width=.48\columnwidth]{08_Mx_distrib_raffica.jpg}} \\
-	\subfloat[$M_z$ manovra]{\includegraphics[width=.48\columnwidth]{09_Mz_distrib_manovra.jpg}} \
-	\subfloat[$M_z$ raffica]{\includegraphics[width=.48\columnwidth]{09_Mz_distrib_raffica.jpg}} \\
+	\subfloat[$T_y$ manovra]{\includegraphics[width=.49\columnwidth]{07_Ty_distribuito_manovra.jpg}} \
+	\subfloat[$T_y$ raffica]{\includegraphics[width=.49\columnwidth]{07_Ty_distribuito_raffica.jpg}} \\
+	\subfloat[$M_x$ manovra]{\includegraphics[width=.49\columnwidth]{08_Mx_distrib_manovra.jpg}} \
+	\subfloat[$M_x$ raffica]{\includegraphics[width=.49\columnwidth]{08_Mx_distrib_raffica.jpg}} \\
+	\subfloat[$M_z$ manovra]{\includegraphics[width=.49\columnwidth]{09_Mz_distrib_manovra.jpg}} \
+	\subfloat[$M_z$ raffica]{\includegraphics[width=.49\columnwidth]{09_Mz_distrib_raffica.jpg}} \\
 	\caption[Carichi distribuiti sui longheorni]{Carichi distribuiti sui longheroni} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
 	\label{fig:az_longh}
 \end{figure}
@@ -577,20 +577,103 @@ Tutta la struttura è realizzata in $A2024$, materiale elastico lineare ed isotr
 	\label{tab:mat}
 \end{table}
 
-
-\section{Analisi}
-
-
-
+Poiché risulta dal modello che la massa complessiva dello stabilizzatore è pari a $5.44 \ kg$, si decide di trascurare il peso proprio della struttura, così come il peso della vernice.
 
 \newpage
 
+\section{Analisi}
 
-\paragraph{Paragraph Description} \lipsum[7] % Dummy text
+Sono state condotte 4 differenti analisi, una per ciascun tipo di carico e modalità di applicazione. La tabella \ref{tab:res} riporta la sintesi dei risultati ottenuti.
 
-\paragraph{Different Paragraph Description} \lipsum[8] % Dummy text
+\begin{table}[bt]
+	\caption{Sintesi dei risultati}
+	\centering
+	\begin{tabular}{lcccccc}
+		\toprule
+		& \multicolumn{3}{c}{deformazione} & \multicolumn{3}{c}{reazioni vincolari} \\
+		\cmidrule(r){2-7}
+		        & $\delta$ & $\theta$ & $\phi$ & $R_y$ & $M_x$ & $M_z$  \\
+	simulazione	& $[mm]$  & $[mrad]$ & $[mrad]$ & $[N]$ & $[Nm]$ & $[Nm]$  \\
+		\midrule
+		Centine manovra & $-11.21$ & $12.8$ & $6.83$ & $2875$ & $-2315$ & $-367$  \\
+		longh. manovra & $-10.82$ & $11.7$ & $-3.25$ & $2852$ & $-2264$ & $-292$  \\
+		\midrule
+		Centine raffica & $-8.15$ & $9.1$ & $3.20$ & $2696$ & $-1822$ & $-834$  \\
+		longh. raffica & $-7.62$ & $8.2$ & $-0.18$ & $2640$ & $-1723$ & $-814$  \\				
+		\bottomrule
+	\end{tabular}
+	\label{tab:res}
+\end{table}
 
-%------------------------------------------------
+
+La sintesi dei risultati mostra come lo stabilizzatore sia sollecitato e si deformi flessionalmente. L'applicazione di carichi concentrati sulle centine garantisce anche una maggior rispondenza delle reazioni di incastro con i dati di progetto. \\
+La stima dei carichi distribuiti sui longheroni risulta essere in difetto e dovrebbe essere rivista, anche se la differenza in termini di deformazione flessionale è minima. Inoltre, l'assenza di momento torcente nella parte esterna dello stabilizzatore porta a risultati contrastanti dal punto di vista dell'angolo di torsione.\\
+Le figure \ref{fig:res1}, \ref{fig:res2} e \ref{fig:res3} mostrano i risultati ottenuti per il caso \emph{manovra}, mentre le figure \ref{fig:res4}, \ref{fig:res5} e \ref{fig:res6} mostrano i risultati ottenuti per il caso \emph{raffica}. \\
+La figura \ref{fig:res7} mostra il livello di $\sigma$ di compressione nei pannelli inferiori.
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[carichi su centine]{\includegraphics[width=.99\columnwidth]{res/CM_displ.png}} \\
+	\subfloat[carichi su longheorni]{\includegraphics[width=.99\columnwidth]{res/LM_displ.png}} \\
+	\caption[manovra: spostamenti]{manovra: spostamenti} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res1}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[az. assiale nei correnti]{\includegraphics[width=.99\columnwidth]{res/CM_correnti_N.png}} \\
+	\subfloat[$\sigma_{max}$ nei correnti]{\includegraphics[width=.99\columnwidth]{res/CM_correnti_sigma.png}} \\
+	\caption[manovra: azioni negli elementi trave]{manovra: azioni negli elementi trave} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res2}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[VM stress $(\le 140Mpa)$ ]{\includegraphics[width=.99\columnwidth]{res/CM_VM01.png}} \\
+	\subfloat[VM stress sup. $(\le 120Mpa)$]{\includegraphics[width=.49\columnwidth]{res/CM_VM02.png}} \
+	\subfloat[VM stress inf. $(\le 60Mpa)$]{\includegraphics[width=.49\columnwidth]{res/CM_VM03.png}} \\
+	\caption[manovra: VM stress]{manovra: VM stress} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res3}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[carichi su centine]{\includegraphics[width=.99\columnwidth]{res/CR_displ.png}} \\
+	\subfloat[carichi su longheorni]{\includegraphics[width=.99\columnwidth]{res/LR_displ.png}} \\
+	\caption[raffica: spostamenti]{raffica: spostamenti} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res4}
+\end{figure}
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[az. assiale nei correnti]{\includegraphics[width=.99\columnwidth]{res/CR_correnti_N.png}} \\
+	\subfloat[$\sigma_{max}$ nei correnti]{\includegraphics[width=.99\columnwidth]{res/CR_correnti_sigma.png}} \\
+	\caption[raffica: azioni negli elementi trave]{raffica: azioni negli elementi trave} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res5}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[VM stress $(\le 120Mpa)$ ]{\includegraphics[width=.99\columnwidth]{res/CR_VM01.png}} \\
+	\subfloat[VM stress sup. $(\le 120Mpa)$]{\includegraphics[width=.49\columnwidth]{res/CR_VM02.png}} \
+	\subfloat[VM stress inf. $(\le 60Mpa)$]{\includegraphics[width=.49\columnwidth]{res/CR_VM03.png}} \\
+	\caption[raffica: VM stress]{raffica: VM stress} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res6}
+\end{figure}
+
+
+\begin{figure}[htb]
+	\centering
+	\subfloat[manovra $\sigma_{xx}$ min]{\includegraphics[width=.99\columnwidth]{res/LM_sigma_xx.png}} \\
+	\subfloat[raffica $\sigma_{xx}$ min]{\includegraphics[width=.99\columnwidth]{res/LR_sigma_xx.png}} \\
+	\caption[pannelli a compressione]{pannelli a compressione} % The text in the square bracket is the caption for the list of figures while the text in the curly brackets is the figure caption
+	\label{fig:res7}
+\end{figure}
+
+\newpage
 
 
 %----------------------------------------------------------------------------------------
@@ -600,23 +683,27 @@ Tutta la struttura è realizzata in $A2024$, materiale elastico lineare ed isotr
 \section{Conclusioni}
 
 
-%------------------------------------------------
+\paragraph{I risultati} ottenuti mostrano come il comportamento della struttura sia prevalentemente flessionale e, come logico attendersi, il carico più critico è quello dovuto a manovra. La deformazione dello stabilizzatore risulta comunque contenuta, tale da non modificare l'operatività della superficie aerodinamica. \\
+Le analisi evidenziano come la regione di attacco dello stabilizzatore sia quella maggiormente caricata. Per il modello adottato il livello degli sforzi risulta comunque contenuto al di sotto di limiti critici. \\
+La validità e coerenza del modello è stata testata per i seguenti aspetti:
 
+\begin{itemize}
+	\item confronto con modello a semiguscio,
+	\item verifica dei valori attesi di risultante e momento risultante complessivi delle forze applicate,
+	\item verifica della corretta applicazione dei carichi tramite elementi di tipo \emph{RBE3} (anche attraverso modelli semplificati di supporto),
+	\item verifica del corretto orientamento degli assi degli elementi di tipo \emph{beam},
+	\item verifica del corretto orientamento degli assi principali degli elementi di tipo \emph{shell},
+	\item verifica di qualità della mesh (presenza di nodi o \emph{edge} orfani, \emph{aspect ratio} degli elementi).
+\end{itemize}
 
-\lipsum[12] % Dummy text
+\paragraph{Analisi} ulteriori dovrebbero comprendere:
 
-\begin{description}
-\item[Word] Definition
-\item[Concept] Explanation
-\item[Idea] Text
-\end{description}
-
-\lipsum[12] % Dummy text
-
-\begin{itemize}[noitemsep] % [noitemsep] removes whitespace between the items for a compact look
-\item First item in a list
-\item Second item in a list
-\item Third item in a list
+\begin{itemize}
+	\item confronto con eventuali risultati sperimentali
+	\item eventuale raffinamento della mesh, o utilizzo di elementi quadratici, per verificare l'assenza di picchi di sforzo che possono essere stati trascurati nell'analisi,
+	\item studio di dettaglio della zona di incastro per verificare la resistenza della connessione alla fusoliera,
+	\item valutazioni più approfondite sui pannelli soggetti a compressione per valutare eventuali fenomeni di instabilità,
+	\item calcolo delle frequenze proprie e dei modi di vibrare principali.
 \end{itemize}
 
 

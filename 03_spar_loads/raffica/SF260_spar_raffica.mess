@@ -343,7 +343,7 @@ BC_FIX=AFFE_CHAR_MECA(VERI_NORM='NON',
 Eq_load = -172.8522
 
 MS_load = [-0.02812778, -0.02668305, -0.02593367, -0.02646421, -0.03454296]
-FS_load = [ 0.03464043,  0.03155887,  0.05796714]
+FS_load = [ -0.03464043,  -0.03155887,  -0.05796714]
 
 BC_RBE=AFFE_CHAR_MECA(MODELE=MODEL,
                       DDL_IMPO=(_F(GROUP_MA='rbe_equil',
@@ -538,7 +538,7 @@ FIN();
                   the revision 36893b10ca0c - branch  default                   
                         Copyright EDF R & D 1991 - 2016                         
                                                                                 
-                    Exécution of:  Tue Jul 12 15:50:59 2016                     
+                    Exécution of:  Thu Jul 14 11:56:50 2016                     
                          Name of the machine:  celsius                          
                                Structure:  64bit                                
                                CPU type:  x86_64                                
@@ -618,7 +618,7 @@ FIN();
 
  End of reading (lasted 0.010000 S.)   
   # Memory (Mo):    327.14 /    320.29 /     40.84 /     21.60 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0001 user+syst:          0.03S (syst:          0.02S, Elaps:          0.02S)
+  # Fin orders No:  0001 user+syst:          0.02S (syst:          0.00S, Elaps:          0.03S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -637,7 +637,7 @@ FIN();
 
 ------------ MAILLAGE MS12     - IMPRESSIONS NIVEAU  1 ------------
 
-MA-12-JUIL-2016 15:50:59                                                        
+JE-14-JUIL-2016 11:56:50                                                        
 
 NOMBRE DE NOEUDS                        1647
 
@@ -654,8 +654,8 @@ NOMBRE DE GROUPES DE MAILLES               1
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    327.14 /    321.17 /     40.84 /     21.60 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0002 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # Memory (Mo):    327.14 /    321.16 /     40.84 /     21.60 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0002 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -681,7 +681,7 @@ Sur les 1841 mailles du maillage .9000023, on a demandé l'affectation de 1841, 
  RELATION DE COMPORTEMENT: ELAS                            
 
 
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 
 
 NOMBRE  DE GROUPES DE NOEUDS CREES :      1
@@ -697,7 +697,7 @@ NOMBRE  DE GROUPES DE NOEUDS CREES :      1
 
 ------------ MAILLAGE .9000028 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000028 CALCULE LE 12/07/2016 A 15:50:59 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000028 CALCULE LE 14/07/2016 A 11:56:50 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                        1647
@@ -722,7 +722,7 @@ Sur les 1841 mailles du maillage .9000028, on a demandé l'affectation de 1841, 
  PLAN            QUAD4           THPLQU4         1451
  PLAN            SEG2            THPLSE2         385
  PLAN            TRIA3           THPLTR3         5
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.01      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
  MATERIAU : .9000030
  RELATION DE COMPORTEMENT: THER                            
@@ -842,8 +842,8 @@ Soit un taux de remplissage de   0.286 %.
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   3.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.02      0.01      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -957,7 +957,7 @@ Soit un taux de remplissage de   0.502 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   3.000E-02
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
    
@@ -1075,7 +1075,7 @@ Soit un taux de remplissage de   0.502 %.
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
    
    !--------------------------------------------------------------------------------------------!
@@ -1489,11 +1489,11 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
           M385                  M391    
           M1      
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
 ------------ MAILLAGE .9000045 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000045 CALCULE LE 12/07/2016 A 15:50:59 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000045 CALCULE LE 14/07/2016 A 11:56:51 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                        1647
@@ -1618,7 +1618,7 @@ Sur les 1841 mailles du maillage .9000045, on a demandé l'affectation de 1841, 
   Mesh : M4. This mesh belongs to GROUP_MA : border   
   Mesh : M5. This mesh belongs to GROUP_MA : border   
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 
 Le système linéaire à résoudre a 1647 degrés de liberté:
    - 1647 sont des degrés de liberté physiques
@@ -1662,12 +1662,12 @@ Le système linéaire à résoudre a 1649 degrés de liberté:
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   6.500E-01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.65      0.00      0.65
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.65      0.01      0.65
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 The column  MAILLAGE is empty. 
-  # Memory (Mo):    366.50 /    356.42 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0003 user+syst:          1.10S (syst:          0.02S, Elaps:          1.08S)
+  # Memory (Mo):    366.49 /    356.41 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0003 user+syst:          1.10S (syst:          0.02S, Elaps:          1.07S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -1687,7 +1687,7 @@ The column  MAILLAGE is empty.
              IMPR_FONCTION='NON',
              FORMAT_R='E12.5',)
 
-  # Memory (Mo):    366.50 /    356.42 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Memory (Mo):    366.49 /    356.41 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
   # Fin orders No:  0056 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
@@ -1707,7 +1707,7 @@ The column  MAILLAGE is empty.
 
 ------------ MAILLAGE MS34     - IMPRESSIONS NIVEAU  1 ------------
 
-MA-12-JUIL-2016 15:51:00                                                        
+JE-14-JUIL-2016 11:56:51                                                        
 
 NOMBRE DE NOEUDS                         863
 
@@ -1725,8 +1725,8 @@ NOMBRE DE GROUPES DE MAILLES               2
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    366.50 /    356.44 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0059 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    366.49 /    356.43 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0059 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -1768,7 +1768,7 @@ NOMBRE  DE GROUPES DE NOEUDS CREES :      1
 
 ------------ MAILLAGE .9000067 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000067 CALCULE LE 12/07/2016 A 15:51:00 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000067 CALCULE LE 14/07/2016 A 11:56:51 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                         863
@@ -1914,7 +1914,7 @@ Soit un taux de remplissage de   0.476 %.
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
    
    !-------------------------------------------------------------------------------!
@@ -2029,9 +2029,9 @@ Soit un taux de remplissage de   0.934 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -2145,10 +2145,10 @@ Soit un taux de remplissage de   0.934 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
    
    !--------------------------------------------------------------------------------------------!
    ! <A> <SUPERVIS_9>                                                                           !
@@ -2439,7 +2439,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
 
 ------------ MAILLAGE .9000084 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000084 CALCULE LE 12/07/2016 A 15:51:00 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000084 CALCULE LE 14/07/2016 A 11:56:52 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                         863
@@ -2565,7 +2565,7 @@ Sur les 992 mailles du maillage .9000084, on a demandé l'affectation de 992, on
   Mesh : M4. This mesh belongs to GROUP_MA : border   
   Mesh : M5. This mesh belongs to GROUP_MA : border   
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
 Le système linéaire à résoudre a 863 degrés de liberté:
    - 863 sont des degrés de liberté physiques
@@ -2608,14 +2608,14 @@ Le système linéaire à résoudre a 865 degrés de liberté:
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.100E-01
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-01
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.09      0.00      0.10
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.01      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 The column  MAILLAGE is empty. 
 
-  # Memory (Mo):    366.50 /    354.82 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0060 user+syst:          0.46S (syst:          0.05S, Elaps:          0.44S)
+  # Memory (Mo):    366.49 /    354.81 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0060 user+syst:          0.44S (syst:          0.02S, Elaps:          0.42S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -2635,8 +2635,8 @@ The column  MAILLAGE is empty.
              IMPR_FONCTION='NON',
              FORMAT_R='E12.5',)
 
-  # Memory (Mo):    366.50 /    354.82 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0113 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    366.49 /    354.81 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0113 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -2655,7 +2655,7 @@ The column  MAILLAGE is empty.
 
 ------------ MAILLAGE MS5      - IMPRESSIONS NIVEAU  1 ------------
 
-MA-12-JUIL-2016 15:51:01                                                        
+JE-14-JUIL-2016 11:56:52                                                        
 
 NOMBRE DE NOEUDS                        1418
 
@@ -2672,8 +2672,8 @@ NOMBRE DE GROUPES DE MAILLES               1
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    366.50 /    354.82 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0116 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # Memory (Mo):    366.49 /    354.81 /     50.45 /     31.88 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0116 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -2693,7 +2693,7 @@ Sur les 1613 mailles du maillage .9000101, on a demandé l'affectation de 1613, 
  D_PLAN          QUAD4           MEDPQU4         1221
  D_PLAN          TRIA3           MEDPTR3         9
                  SEG2            MEPLSE2         383
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 
  MATERIAU : .9000103
  RELATION DE COMPORTEMENT: ELAS                            
@@ -2715,7 +2715,7 @@ NOMBRE  DE GROUPES DE NOEUDS CREES :      1
 
 ------------ MAILLAGE .9000106 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000106 CALCULE LE 12/07/2016 A 15:51:01 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000106 CALCULE LE 14/07/2016 A 11:56:52 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                        1418
@@ -2859,9 +2859,9 @@ Soit un taux de remplissage de   0.307 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   3.000E-02
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -2976,7 +2976,7 @@ Soit un taux de remplissage de   0.575 %.
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
    
    !-------------------------------------------------------------------------------!
@@ -3093,7 +3093,7 @@ Soit un taux de remplissage de   0.575 %.
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.02      0.00      0.01
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
    
    !--------------------------------------------------------------------------------------------!
@@ -3505,11 +3505,11 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
           M383                  M393    
           M1      
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 
 ------------ MAILLAGE .9000123 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000123 CALCULE LE 12/07/2016 A 15:51:01 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000123 CALCULE LE 14/07/2016 A 11:56:52 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                        1418
@@ -3678,13 +3678,13 @@ Le système linéaire à résoudre a 1420 degrés de liberté:
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   4.200E-01
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.42      0.01      0.42
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.43      0.01      0.42
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.01
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 The column  MAILLAGE is empty. 
 
-  # Memory (Mo):    370.39 /    357.72 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0117 user+syst:          0.88S (syst:          0.03S, Elaps:          0.86S)
+  # Memory (Mo):    370.37 /    357.77 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0117 user+syst:          0.86S (syst:          0.01S, Elaps:          0.84S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -3704,8 +3704,8 @@ The column  MAILLAGE is empty.
              IMPR_FONCTION='NON',
              FORMAT_R='E12.5',)
 
-  # Memory (Mo):    370.39 /    357.72 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0170 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    370.37 /    357.77 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0170 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -3724,7 +3724,7 @@ The column  MAILLAGE is empty.
 
 ------------ MAILLAGE Fstr     - IMPRESSIONS NIVEAU  1 ------------
 
-MA-12-JUIL-2016 15:51:01                                                        
+JE-14-JUIL-2016 11:56:53                                                        
 
 NOMBRE DE NOEUDS                         610
 
@@ -3742,8 +3742,8 @@ NOMBRE DE GROUPES DE MAILLES               2
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    370.39 /    357.72 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0173 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # Memory (Mo):    370.37 /    357.77 /     51.01 /     32.11 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0173 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -3769,7 +3769,7 @@ Sur les 735 mailles du maillage .9000140, on a demandé l'affectation de 735, on
  RELATION DE COMPORTEMENT: ELAS                            
 
 
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
 
 NOMBRE  DE GROUPES DE NOEUDS CREES :      1
@@ -3785,7 +3785,7 @@ NOMBRE  DE GROUPES DE NOEUDS CREES :      1
 
 ------------ MAILLAGE .9000145 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000145 CALCULE LE 12/07/2016 A 15:51:02 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000145 CALCULE LE 14/07/2016 A 11:56:53 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                         610
@@ -3931,8 +3931,8 @@ Soit un taux de remplissage de   0.546 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   2.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.01      0.00
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
    
    !-------------------------------------------------------------------------------!
@@ -4049,7 +4049,7 @@ Soit un taux de remplissage de   1.265 %.
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
 #1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
    
    !-------------------------------------------------------------------------------!
    ! <A> <CHARGES2_87>                                                             !
@@ -4163,9 +4163,9 @@ Soit un taux de remplissage de   1.265 %.
 
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
-NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   0.000E+00
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   1.000E-02
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
    
    !--------------------------------------------------------------------------------------------!
@@ -4448,7 +4448,7 @@ NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   0.000E+00
 
 ------------ MAILLAGE .9000162 - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT .9000162 CALCULE LE 12/07/2016 A 15:51:02 DE TYPE        
+ASTER 13.01.00 CONCEPT .9000162 CALCULE LE 14/07/2016 A 11:56:53 DE TYPE        
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                         610
@@ -4573,7 +4573,7 @@ Sur les 735 mailles du maillage .9000162, on a demandé l'affectation de 735, on
   Mesh : M3. This mesh belongs to GROUP_MA : border   
   Mesh : M4. This mesh belongs to GROUP_MA : border   
   Mesh : M5. This mesh belongs to GROUP_MA : border   
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 
 Le système linéaire à résoudre a 610 degrés de liberté:
@@ -4618,13 +4618,13 @@ Le système linéaire à résoudre a 612 degrés de liberté:
  Filing of the fields 
     Field stored  TEMP at time  0.000000000000e+00 for the sequence number  0
 NUMERO D'ORDRE:      0 INSTANT:   0.000E+00 DUREE MOYENNE:   4.000E-02
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.03      0.00      0.04
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      0.04      0.00      0.04
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.00
 The column  MAILLAGE is empty. 
 
-  # Memory (Mo):    370.39 /    356.92 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0174 user+syst:          0.35S (syst:          0.03S, Elaps:          0.32S)
+  # Memory (Mo):    370.37 /    356.91 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0174 user+syst:          0.34S (syst:          0.01S, Elaps:          0.33S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -4644,8 +4644,8 @@ The column  MAILLAGE is empty.
              IMPR_FONCTION='NON',
              FORMAT_R='E12.5',)
 
-  # Memory (Mo):    370.39 /    356.92 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0227 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
+  # Memory (Mo):    370.37 /    356.91 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0227 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -4663,7 +4663,7 @@ The column  MAILLAGE is empty.
  RELATION DE COMPORTEMENT: ELAS                            
 
 
-  # Memory (Mo):    370.39 /    356.92 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Memory (Mo):    370.37 /    356.91 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
   # Fin orders No:  0230 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
@@ -4696,7 +4696,7 @@ The column  MAILLAGE is empty.
 
 ------------ MAILLAGE MAIL     - IMPRESSIONS NIVEAU  1 ------------
 
-MA-12-JUIL-2016 15:51:02                                                        
+JE-14-JUIL-2016 11:56:53                                                        
 
 NOMBRE DE NOEUDS                        7065
 
@@ -4948,8 +4948,8 @@ NOMBRE DE GROUPES DE MAILLES             128
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    370.39 /    358.57 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0231 user+syst:          0.13S (syst:          0.01S, Elaps:          0.13S)
+  # Memory (Mo):    370.37 /    358.62 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0231 user+syst:          0.12S (syst:          0.00S, Elaps:          0.13S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5011,7 +5011,7 @@ TRAITEMENT DU GROUP_MA: f_stringer_u             DE      42 MAILLES
 TRAITEMENT DU GROUP_MA: f_stringer_d             DE      42 MAILLES
                               0 MAILLE(S) ONT ETE ORIENTEE(S)
 AU TOTAL      79 MAILLE(S) ORIENTEE(S) 
-  # Memory (Mo):    370.39 /    358.57 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Memory (Mo):    370.37 /    358.62 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
   # Fin orders No:  0232 user+syst:          0.01S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
@@ -5074,7 +5074,7 @@ TRAITEMENT DU GROUP_MA: C5_u                     DE      32 MAILLES
 TRAITEMENT DU GROUP_MA: C5_d                     DE      32 MAILLES
                              32 MAILLE(S) ONT ETE ORIENTEE(S)
 AU TOTAL     160 MAILLE(S) ORIENTEE(S) 
-  # Memory (Mo):    370.39 /    358.57 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Memory (Mo):    370.37 /    358.62 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
   # Fin orders No:  0233 user+syst:          0.01S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
@@ -5091,7 +5091,7 @@ MOT CLE FACTEUR "CREA_POI1", OCCURRENCE    1
 
 ------------ MAILLAGE mesh1    - IMPRESSIONS NIVEAU  1 ------------
 
-ASTER 13.01.00 CONCEPT mesh1 CALCULE LE 12/07/2016 A 15:51:02 DE TYPE           
+ASTER 13.01.00 CONCEPT mesh1 CALCULE LE 14/07/2016 A 11:56:53 DE TYPE           
 MAILLAGE_SDASTER                                                                
 
 NOMBRE DE NOEUDS                        7065
@@ -5346,8 +5346,8 @@ NOMBRE DE GROUPES DE MAILLES             129
 
 --------------------------------------------------------------------------------
 
-  # Memory (Mo):    370.39 /    359.69 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0234 user+syst:          0.04S (syst:          0.00S, Elaps:          0.05S)
+  # Memory (Mo):    370.37 /    359.74 /     51.01 /     32.50 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0234 user+syst:          0.04S (syst:          0.00S, Elaps:          0.04S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5377,8 +5377,8 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
  DKT             QUAD4           MEDKQU4         7138
  DKT             TRIA3           MEDKTR3         133
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-  # Memory (Mo):    370.39 /    360.12 /     51.01 /     32.82 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0235 user+syst:          0.02S (syst:          0.01S, Elaps:          0.01S)
+  # Memory (Mo):    370.37 /    360.29 /     51.01 /     32.82 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0235 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5390,7 +5390,7 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
                         INFO=1,
                         )
 
-  # Memory (Mo):    370.39 /    360.12 /     51.01 /     32.82 (VmPeak / VmSize / Optimum / Minimum)
+  # Memory (Mo):    370.37 /    360.29 /     51.01 /     32.82 (VmPeak / VmSize / Optimum / Minimum)
   # Fin orders No:  0236 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
@@ -5584,8 +5584,8 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
                                         1 ELEMENT(S) DISCRET         
                                      7271 ELEMENT(S) COQUE           
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.00      0.00      0.00
-  # Memory (Mo):    370.39 /    364.23 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0237 user+syst:          0.19S (syst:          0.00S, Elaps:          0.19S)
+  # Memory (Mo):    370.37 /    364.28 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0237 user+syst:          0.19S (syst:          0.01S, Elaps:          0.18S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5597,21 +5597,21 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
                                       GROUP_MA=('fix', ),),
                           INFO=1,)
 
-  # Memory (Mo):    370.39 /    364.23 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0239 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    370.37 /    364.28 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0239 user+syst:          0.00S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
   # Commands No:  0240 Concept of the type:  char_meca
   # ------------------------------------------------------------------------------------------
   BC_RBE = AFFE_CHAR_MECA(MODELE=MODEL,
-                          FORCE_COQUE=(_F(FY=-0.06276821,
+                          FORCE_COQUE=(_F(FY=6.512649999999998E-3,
                                           GROUP_MA=('MS1', ),
                                           PLAN='MAIL',),
-                                       _F(FY=-0.05824192,
+                                       _F(FY=4.875820000000003E-3,
                                           GROUP_MA=('MS2', ),
                                           PLAN='MAIL',),
-                                       _F(FY=-0.08390080999999999,
+                                       _F(FY=0.03203347,
                                           GROUP_MA=('MS3', ),
                                           PLAN='MAIL',),
                                        _F(FY=-0.02646421,
@@ -5620,13 +5620,13 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
                                        _F(FY=-0.03454296,
                                           GROUP_MA=('MS5', ),
                                           PLAN='MAIL',),
-                                       _F(FY=0.03464043,
+                                       _F(FY=-0.03464043,
                                           GROUP_MA=('FS1', ),
                                           PLAN='MAIL',),
-                                       _F(FY=0.03155887,
+                                       _F(FY=-0.03155887,
                                           GROUP_MA=('FS2', ),
                                           PLAN='MAIL',),
-                                       _F(FY=0.05796714,
+                                       _F(FY=-0.05796714,
                                           GROUP_MA=('FS3', ),
                                           PLAN='MAIL',),
                                        ),
@@ -5645,8 +5645,8 @@ Sur les 8125 mailles du maillage mesh1, on a demandé l'affectation de 7908, on 
                           VERI_NORM='OUI',)
 
 #3      Dechargement de la memoire sur disque             CPU (USER+SYST/SYST/ELAPS):      0.01      0.00      0.01
-  # Memory (Mo):    370.39 /    353.35 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0240 user+syst:          0.03S (syst:          0.01S, Elaps:          0.03S)
+  # Memory (Mo):    370.37 /    353.22 /     51.01 /     33.06 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0240 user+syst:          0.03S (syst:          0.00S, Elaps:          0.02S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5762,10 +5762,10 @@ Soit un taux de remplissage de   0.128 %.
    !--------------------------------------------------------------------------------------!
    
    CHAMP STOCKE :             DEPL INSTANT :  0.00000E+00  NUMERO D'ORDRE :     1
-#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      3.20      0.07      1.14
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.35      0.01      0.35
-  # Memory (Mo):    499.30 /    367.59 /    176.77 /     48.13 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0241 user+syst:          3.59S (syst:          0.09S, Elaps:          1.53S)
+#1      Resolution des systemes lineaires                 CPU (USER+SYST/SYST/ELAPS):      3.17      0.02      1.10
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.34      0.00      0.36
+  # Memory (Mo):    499.18 /    367.43 /    176.77 /     48.13 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0241 user+syst:          3.56S (syst:          0.02S, Elaps:          1.49S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5867,9 +5867,9 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    !  warning, you can obtain unexpected results!                                         !
    !--------------------------------------------------------------------------------------!
    
-#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.39      0.01      0.37
-  # Memory (Mo):    499.30 /    390.11 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0242 user+syst:          0.40S (syst:          0.01S, Elaps:          0.40S)
+#2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.38      0.01      0.37
+  # Memory (Mo):    499.18 /    390.27 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0242 user+syst:          0.41S (syst:          0.02S, Elaps:          0.41S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5883,8 +5883,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
                     INFO=1,
                     CRITERE='RELATIF',)
 
-  # Memory (Mo):    499.30 /    391.29 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0243 user+syst:          0.03S (syst:          0.00S, Elaps:          0.04S)
+  # Memory (Mo):    499.18 /    391.61 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0243 user+syst:          0.03S (syst:          0.00S, Elaps:          0.03S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -5898,8 +5898,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
                                    NOM_CHAM=('SIGM_ELNO', 'SIEQ_ELNO'),),
                      )
 
-  # Memory (Mo):    499.30 /    397.95 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0244 user+syst:          0.02S (syst:          0.00S, Elaps:          0.01S)
+  # Memory (Mo):    499.18 /    397.86 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0244 user+syst:          0.01S (syst:          0.00S, Elaps:          0.02S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6005,8 +6005,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    !  warning, you can obtain unexpected results!                                              !
    !-------------------------------------------------------------------------------------------!
    
-  # Memory (Mo):    499.30 /    404.33 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0245 user+syst:          0.74S (syst:          0.01S, Elaps:          0.74S)
+  # Memory (Mo):    499.18 /    404.06 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0245 user+syst:          0.74S (syst:          0.00S, Elaps:          0.73S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6019,8 +6019,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
                                    NOM_CHAM=('SIGM_ELNO', 'SIEQ_ELNO'),),
                      )
 
-  # Memory (Mo):    499.30 /    410.54 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0246 user+syst:          0.01S (syst:          0.00S, Elaps:          0.02S)
+  # Memory (Mo):    499.18 /    410.46 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0246 user+syst:          0.02S (syst:          0.00S, Elaps:          0.02S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6126,8 +6126,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    !  warning, you can obtain unexpected results!                                              !
    !-------------------------------------------------------------------------------------------!
    
-  # Memory (Mo):    499.30 /    416.92 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0247 user+syst:          0.74S (syst:          0.01S, Elaps:          0.74S)
+  # Memory (Mo):    499.18 /    416.66 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0247 user+syst:          0.73S (syst:          0.01S, Elaps:          0.74S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6140,8 +6140,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
                                    NOM_CHAM=('SIGM_ELNO', 'SIEQ_ELNO'),),
                      )
 
-  # Memory (Mo):    499.30 /    423.12 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0248 user+syst:          0.02S (syst:          0.01S, Elaps:          0.01S)
+  # Memory (Mo):    499.18 /    423.05 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0248 user+syst:          0.02S (syst:          0.00S, Elaps:          0.01S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6247,8 +6247,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    !  warning, you can obtain unexpected results!                                              !
    !-------------------------------------------------------------------------------------------!
    
-  # Memory (Mo):    499.30 /    429.51 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0249 user+syst:          0.73S (syst:          0.00S, Elaps:          0.74S)
+  # Memory (Mo):    499.18 /    429.25 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0249 user+syst:          0.74S (syst:          0.01S, Elaps:          0.74S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6348,8 +6348,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    !--------------------------------------------------------------------------------------!
    
 #2      Calculs elementaires et assemblages               CPU (USER+SYST/SYST/ELAPS):      0.08      0.00      0.08
-  # Memory (Mo):    499.30 /    429.51 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0250 user+syst:          0.24S (syst:          0.00S, Elaps:          0.25S)
+  # Memory (Mo):    499.18 /    429.39 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0250 user+syst:          0.25S (syst:          0.00S, Elaps:          0.25S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6369,8 +6369,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
              IMPR_FONCTION='NON',
              FORMAT='TABLEAU',)
 
-  # Memory (Mo):    499.30 /    429.51 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0251 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    499.18 /    429.39 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0251 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6442,8 +6442,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
                                ),
                        INFO=1,)
 
-  # Memory (Mo):    499.30 /    429.51 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0254 user+syst:          0.03S (syst:          0.00S, Elaps:          0.04S)
+  # Memory (Mo):    499.18 /    429.39 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0254 user+syst:          0.04S (syst:          0.00S, Elaps:          0.04S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6463,8 +6463,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
              IMPR_FONCTION='NON',
              FORMAT_R='E12.5',)
 
-  # Memory (Mo):    499.30 /    429.51 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0255 user+syst:          0.01S (syst:          0.00S, Elaps:          0.00S)
+  # Memory (Mo):    499.18 /    429.39 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0255 user+syst:          0.00S (syst:          0.00S, Elaps:          0.00S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6480,8 +6480,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
             UNITE=80,
             INFO=1,)
 
-  # Memory (Mo):    499.30 /    435.00 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0258 user+syst:          0.29S (syst:          0.03S, Elaps:          0.29S)
+  # Memory (Mo):    499.18 /    435.06 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0258 user+syst:          0.29S (syst:          0.02S, Elaps:          0.29S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6510,8 +6510,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
             UNITE=81,
             INFO=1,)
 
-  # Memory (Mo):    499.30 /    446.99 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0259 user+syst:          0.33S (syst:          0.02S, Elaps:          0.33S)
+  # Memory (Mo):    499.18 /    447.05 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0259 user+syst:          0.33S (syst:          0.00S, Elaps:          0.33S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6548,8 +6548,8 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
  
  In certain cases, file MED produced can become bulky. In this case,
  the use of key word NOM_CMP is advised. 
-  # Memory (Mo):    499.30 /    446.99 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
-  # Fin orders No:  0260 user+syst:          0.04S (syst:          0.00S, Elaps:          0.05S)
+  # Memory (Mo):    499.18 /    447.05 /    176.77 /     50.72 (VmPeak / VmSize / Optimum / Minimum)
+  # Fin orders No:  0260 user+syst:          0.04S (syst:          0.00S, Elaps:          0.04S)
   # ------------------------------------------------------------------------------------------
 
   # ------------------------------------------------------------------------------------------
@@ -6732,7 +6732,7 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
  <FIN> Arrêt normal dans "FIN".
 
  The memory requested from launching is over-estimated, it is of 8192.00 Mo. 
- The peak report used is of 499.30 Mo. 
+ The peak report used is of 499.18 Mo. 
  
 
 
@@ -6766,75 +6766,75 @@ Le système linéaire à résoudre a 42585 degrés de liberté:
    MEMOIRE JEVEUX OPTIMALE REQUISE POUR L'EXECUTION :     176.77 Mo
      - LIMITE LES ACCES DISQUE
      - AMELIORE LA VITESSE D'EXECUTION
-   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     499.30 Mo
+   MAXIMUM DE MEMOIRE UTILISEE PAR LE PROCESSUS     :     499.18 Mo
      - COMPREND LA MEMOIRE CONSOMMEE PAR  JEVEUX, 
        LE SUPERVISEUR PYTHON, LES LIBRAIRIES EXTERNES
   
- <I>       FIN D'EXECUTION LE : MA-12-JUIL-2016 15:51:08
+ <I>       FIN D'EXECUTION LE : JE-14-JUIL-2016 11:56:59
 
  
  <I> Informations over the execution times
- total Temps CPU      10.87 S
- Temps CPU to use total      10.42 S
- Temps CPU total system       0.45 S
- Temps CPU remaining    3877.13 S 
+ total Temps CPU      10.78 S
+ Temps CPU to use total      10.55 S
+ Temps CPU total system       0.23 S
+ Temps CPU remaining    3877.22 S 
 
 
  The signup of the saved base is (with the address 45875200): 
-  16f2022e760dc50d0becf45e6d37395a1824f661 
+  299d68cc371983b3a4aff3681de844d3aa957bfe 
 
  ********************************************************************************
  * COMMAND                  :       USER :     SYSTEM :   USER+SYS :    ELAPSED *
  ********************************************************************************
- * init (jdc)               :       0.23 :       0.03 :       0.26 :       0.27 *
- *  . compile               :       0.01 :       0.00 :       0.01 :       0.00 *
- *  . exec_compile          :       0.07 :       0.01 :       0.08 :       0.09 *
+ * init (jdc)               :       0.25 :       0.01 :       0.26 :       0.26 *
+ *  . compile               :       0.00 :       0.00 :       0.00 :       0.00 *
+ *  . exec_compile          :       0.08 :       0.01 :       0.09 :       0.08 *
  *  . report                :       0.02 :       0.00 :       0.02 :       0.02 *
  *  . build                 :       0.00 :       0.00 :       0.00 :       0.00 *
- * DEBUT                    :       0.01 :       0.02 :       0.03 :       0.02 *
- * LIRE_MAILLAGE            :       0.00 :       0.00 :       0.00 :       0.01 *
- * MACR_CARA_POUTRE         :       1.08 :       0.02 :       1.10 :       1.08 *
- * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * DEBUT                    :       0.02 :       0.00 :       0.02 :       0.03 *
  * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.00 *
- * MACR_CARA_POUTRE         :       0.41 :       0.05 :       0.46 :       0.44 *
+ * MACR_CARA_POUTRE         :       1.08 :       0.02 :       1.10 :       1.07 *
  * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
  * LIRE_MAILLAGE            :       0.00 :       0.00 :       0.00 :       0.01 *
- * MACR_CARA_POUTRE         :       0.85 :       0.03 :       0.88 :       0.86 *
- * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
- * LIRE_MAILLAGE            :       0.00 :       0.00 :       0.00 :       0.01 *
- * MACR_CARA_POUTRE         :       0.32 :       0.03 :       0.35 :       0.32 *
+ * MACR_CARA_POUTRE         :       0.42 :       0.02 :       0.44 :       0.42 *
  * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.01 *
+ * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.00 *
+ * MACR_CARA_POUTRE         :       0.85 :       0.01 :       0.86 :       0.84 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.01 *
+ * LIRE_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.00 *
+ * MACR_CARA_POUTRE         :       0.33 :       0.01 :       0.34 :       0.33 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
  * DEFI_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.00 *
- * LIRE_MAILLAGE            :       0.12 :       0.01 :       0.13 :       0.13 *
+ * LIRE_MAILLAGE            :       0.12 :       0.00 :       0.12 :       0.13 *
  * MODI_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
  * MODI_MAILLAGE            :       0.01 :       0.00 :       0.01 :       0.01 *
- * CREA_MAILLAGE            :       0.04 :       0.00 :       0.04 :       0.05 *
- * AFFE_MODELE              :       0.01 :       0.01 :       0.02 :       0.01 *
+ * CREA_MAILLAGE            :       0.04 :       0.00 :       0.04 :       0.04 *
+ * AFFE_MODELE              :       0.01 :       0.00 :       0.01 :       0.00 *
  * AFFE_MATERIAU            :       0.00 :       0.00 :       0.00 :       0.00 *
- * AFFE_CARA_ELEM           :       0.19 :       0.00 :       0.19 :       0.19 *
- * AFFE_CHAR_MECA           :       0.00 :       0.00 :       0.00 :       0.00 *
- * AFFE_CHAR_MECA           :       0.02 :       0.01 :       0.03 :       0.03 *
- * MECA_STATIQUE            :       3.50 :       0.09 :       3.59 :       1.53 *
- * CALC_CHAMP               :       0.39 :       0.01 :       0.40 :       0.40 *
- * CALC_CHAMP               :       0.03 :       0.00 :       0.03 :       0.04 *
+ * AFFE_CARA_ELEM           :       0.18 :       0.01 :       0.19 :       0.18 *
+ * AFFE_CHAR_MECA           :       0.00 :       0.00 :       0.00 :       0.01 *
+ * AFFE_CHAR_MECA           :       0.03 :       0.00 :       0.03 :       0.02 *
+ * MECA_STATIQUE            :       3.54 :       0.02 :       3.56 :       1.49 *
+ * CALC_CHAMP               :       0.39 :       0.02 :       0.41 :       0.41 *
+ * CALC_CHAMP               :       0.03 :       0.00 :       0.03 :       0.03 *
+ * POST_CHAMP               :       0.01 :       0.00 :       0.01 :       0.02 *
+ * CALC_CHAMP               :       0.74 :       0.00 :       0.74 :       0.73 *
+ * POST_CHAMP               :       0.02 :       0.00 :       0.02 :       0.02 *
+ * CALC_CHAMP               :       0.72 :       0.01 :       0.73 :       0.74 *
  * POST_CHAMP               :       0.02 :       0.00 :       0.02 :       0.01 *
  * CALC_CHAMP               :       0.73 :       0.01 :       0.74 :       0.74 *
- * POST_CHAMP               :       0.01 :       0.00 :       0.01 :       0.02 *
- * CALC_CHAMP               :       0.73 :       0.01 :       0.74 :       0.74 *
- * POST_CHAMP               :       0.01 :       0.01 :       0.02 :       0.01 *
- * CALC_CHAMP               :       0.73 :       0.00 :       0.73 :       0.74 *
- * POST_ELEM                :       0.24 :       0.00 :       0.24 :       0.25 *
- * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
- * POST_RELEVE_T            :       0.03 :       0.00 :       0.03 :       0.04 *
- * IMPR_TABLE               :       0.01 :       0.00 :       0.01 :       0.00 *
- * IMPR_RESU                :       0.26 :       0.03 :       0.29 :       0.29 *
- * IMPR_RESU                :       0.31 :       0.02 :       0.33 :       0.33 *
- * IMPR_RESU                :       0.04 :       0.00 :       0.04 :       0.05 *
- * FIN                      :       0.03 :       0.06 :       0.09 :       0.08 *
- *  . part Superviseur      :       0.63 :       0.08 :       0.71 :       0.64 *
- *  . part Fortran          :       9.79 :       0.37 :      10.16 :       8.11 *
+ * POST_ELEM                :       0.25 :       0.00 :       0.25 :       0.25 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * POST_RELEVE_T            :       0.04 :       0.00 :       0.04 :       0.04 *
+ * IMPR_TABLE               :       0.00 :       0.00 :       0.00 :       0.00 *
+ * IMPR_RESU                :       0.27 :       0.02 :       0.29 :       0.29 *
+ * IMPR_RESU                :       0.33 :       0.00 :       0.33 :       0.33 *
+ * IMPR_RESU                :       0.04 :       0.00 :       0.04 :       0.04 *
+ * FIN                      :       0.02 :       0.06 :       0.08 :       0.08 *
+ *  . part Superviseur      :       0.60 :       0.02 :       0.62 :       0.67 *
+ *  . part Fortran          :       9.95 :       0.21 :      10.16 :       7.97 *
  ********************************************************************************
- * TOTAL_JOB                :      10.42 :       0.45 :      10.87 :       8.75 *
+ * TOTAL_JOB                :      10.55 :       0.23 :      10.78 :       8.64 *
  ********************************************************************************
 
-EXECUTION_CODE_ASTER_EXIT_3462=0
+EXECUTION_CODE_ASTER_EXIT_12586=0
